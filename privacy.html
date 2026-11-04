@@ -56,35 +56,54 @@
 <body>
 <main>
   <div class="wings"><h1>Privacy Policy</h1></div>
-  <p class="sub">Ironclad, Ironclad Free and Ironclad Free in the browser &middot; Effective 16 October 2026</p>
+  <p class="sub">Ironclad, Ironclad Free and Ironclad Free in the browser &middot; Effective 3 November 2026</p>
 
   <div class="summary">
     <p><strong>In short:</strong></p>
     <ul>
-      <li><strong>Ironclad</strong> (the paid Android app) collects no personal data. It has no accounts, ads, analytics or tracking, and it doesn't use the internet.</li>
+      <li><strong>Ironclad</strong> (the paid Android app) has no ads, and no analytics or tracking of its own. Its online leaderboards run on <strong>Google Play Games</strong>: if you're signed in, your scores go to Google, and Google's Play Games SDK collects some usage and diagnostic data, as described below. You can play without signing in.</li>
       <li><strong>Ironclad Free</strong> shows optional rewarded ads from Google AdMob. Google collects some device and usage data to serve them, as described below. The game itself still collects nothing.</li>
       <li><strong>The browser version</strong> (Ironclad Free in your browser) has no ads and collects nothing. GitHub, which hosts it, keeps standard server logs.</li>
-      <li>We never sell or share your data, because we never receive any.</li>
+      <li>We never sell or share your data. We run no servers and receive no personal data: the only data that leaves your device goes to Google.</li>
     </ul>
   </div>
 
   <h2>Who this covers</h2>
-  <p>This policy covers the Android apps <strong>Ironclad</strong> (<span class="muted">com.projectmtb.game</span>) and <strong>Ironclad Free</strong> (<span class="muted">com.projectmtb.game.free</span>), and the free browser version at <a href="https://rblizz24.github.io/Ironclad-free/">rblizz24.github.io/Ironclad-free</a>. All three are made by Ironclad's independent developer, called "we" and "us" here.</p>
+  <p>This policy covers the Android apps <strong>Ironclad</strong> (<span class="muted">com.ironcladbattletank.game</span>) and <strong>Ironclad Free</strong> (<span class="muted">com.ironcladbattletank.game.free</span>), and the free browser version at <a href="https://rblizz24.github.io/Ironclad-free/">rblizz24.github.io/Ironclad-free</a>. All three are made by Icehowl, an independent developer, called "we" and "us" here.</p>
 
   <h2>What the game keeps, and where</h2>
   <p>Your progress is saved on your device only:</p>
   <ul>
-    <li><strong>What's saved:</strong> your Requisition (REQ), unlocked upgrades and vehicles, feat progress, best scores, music and sound settings. In Ironclad Free, also the number of ads watched today.</li>
+    <li><strong>What's saved:</strong> your commander name, Requisition (REQ), unlocked upgrades and vehicles, feat progress, best scores, recent runs, and music and sound settings. In Ironclad Free, also the number of ads watched today.</li>
     <li><strong>On Android</strong> it lives in the app's private storage, which other apps can't read.</li>
     <li><strong>In a browser</strong> it lives in that browser's local storage for this site.</li>
   </ul>
-  <p>The game doesn't send this anywhere. We run no servers, and there are no accounts, sign-ins, analytics or crash reports. We never see your save.</p>
+  <p>The game doesn't send this anywhere. We run no servers, and the game has no accounts, analytics or crash reports of its own. We never see your save. The one exception is your scores in Ironclad, when you're signed in to Google Play Games (see below).</p>
   <p>If Android's backup is turned on for your device, Android may include the app's save in your device backup to your Google account. Google handles that backup under its own <a href="https://policies.google.com/privacy">privacy policy</a>.</p>
 
   <h3>Android permissions</h3>
   <ul>
     <li><strong>Vibration</strong> (both apps), for hit feedback.</li>
-    <li><strong>Internet, network state and advertising ID</strong> (Ironclad Free only). Google's ads SDK uses these to load and show ads. The paid app requests none of them.</li>
+    <li><strong>Internet and network state</strong> (both apps). Ironclad uses them for its Google Play Games leaderboards, Ironclad Free to load and show ads.</li>
+    <li><strong>Advertising ID</strong> (Ironclad Free only), for Google's ads SDK. The paid app doesn't request it.</li>
+  </ul>
+
+  <h2>Online leaderboards in Ironclad</h2>
+  <p>Ironclad's online leaderboards (the campaign, Endless on each map and the weekly operation) run on <strong>Google Play Games</strong>. Signing in is optional. If you use Play Games on your phone, it may sign you in by itself when the game starts. While you're signed in, the following goes to Google:</p>
+  <dl>
+    <dt>Scores</dt>
+    <dd>Your best scores, each with the details of its run shown beside it on the board: vehicle, its variant and grade, Escalation, Depot ranks, weather and night, and your rank and MASTERY level.</dd>
+    <dt>Your Play Games profile</dt>
+    <dd>The boards show your Play Games name and avatar beside your scores, to whoever your Play Games profile settings allow. Your in-game commander name is never sent.</dd>
+    <dt>Usage and diagnostics</dt>
+    <dd>Google's Play Games SDK collects data about how it is used and how well it runs, to keep it stable and improve it.</dd>
+  </dl>
+  <p>It is encrypted in transit (HTTPS). Google handles it under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. We see only what the leaderboards show everyone, and Play Games' overall totals.</p>
+
+  <h3>Your choices</h3>
+  <ul>
+    <li><strong>Signing in is optional.</strong> Without it the leaderboards show this device's scores only, and weekly operations pay no REQ, since that pay goes by your place on the online board. Everything else plays the same.</li>
+    <li><strong>Your Play Games data</strong> can be deleted, for one game or with your whole Play Games profile, from your Play Games profile settings or at <a href="https://myaccount.google.com/data-and-privacy">myaccount.google.com</a>.</li>
   </ul>
 
   <h2>Ads in Ironclad Free</h2>
@@ -116,15 +135,16 @@
   <p>Ironclad is a combat game and isn't directed at children under 13, or the higher minimum age where you live. We don't knowingly collect personal information from anyone, children included.</p>
 
   <h2>Sharing and selling</h2>
-  <p>We don't sell, rent or share personal data, because we don't collect any. The only data that leaves your device is what Google's ads SDK sends to Google in Ironclad Free, described above.</p>
+  <p>We don't sell, rent or share personal data, because we don't collect any. The only data that leaves your device is what Google's SDKs send to Google: Play Games in Ironclad and the ads SDK in Ironclad Free, both described above.</p>
 
   <h2>Security</h2>
-  <p>Your save stays inside Android's app sandbox, or your browser's storage for this site. Nothing is stored on our side. Google's ads SDK encrypts what it sends.</p>
+  <p>Your save stays inside Android's app sandbox, or your browser's storage for this site. Nothing is stored on our side. Google's SDKs encrypt what they send.</p>
 
   <h2>Keeping and deleting data</h2>
   <ul>
     <li><strong>Your game save</strong> stays on your device until you delete it. Uninstalling the app removes it, as does clearing its storage (<em>Settings &rsaquo; Apps &rsaquo; Ironclad &rsaquo; Storage &rsaquo; Clear storage</em>). In a browser, clear this site's data.</li>
     <li><strong>Ad data</strong> is kept by Google under its own retention policy. You can delete your advertising ID as described above, and manage your Google data at <a href="https://myaccount.google.com/data-and-privacy">myaccount.google.com</a>.</li>
+    <li><strong>Play Games data</strong> (Ironclad) is kept by Google with your Play Games profile until you delete it, as described above.</li>
     <li>We hold no data about you, so there is nothing for us to delete. We'll still answer any question you send.</li>
   </ul>
 
