@@ -61,10 +61,10 @@
   <div class="summary">
     <p><strong>In short:</strong></p>
     <ul>
-      <li><strong>Ironclad</strong> has no ads, and no analytics, tracking or crash reporting of its own. Your progress is saved on your device.</li>
+      <li><strong>Ironclad</strong> is free to download, and one in-app purchase through Google Play unlocks the full game. It has no ads, and no analytics, tracking or crash reporting of its own. Your progress is saved on your device.</li>
       <li>Its online leaderboards and achievements run on <strong>Google Play Games</strong>. If you're signed in, your scores and achievements go to Google, and Google's Play Games SDK collects some usage and diagnostic data, as described below. Signing in is optional.</li>
       <li><strong>The browser test version</strong>, shared with invited testers behind a password, has no online features and collects nothing. GitHub, which hosts it, keeps standard server logs.</li>
-      <li>We never sell or share your data. We run no servers and receive no personal data: the only data that leaves your device goes to Google.</li>
+      <li>We never sell or share your data, and we run no servers. The game sends data only to Google. The only personal data we receive is the order record Google Play gives us when you buy the unlock.</li>
     </ul>
   </div>
 
@@ -75,17 +75,18 @@
   <h2>What the game keeps, and where</h2>
   <p>Your progress is saved on your device only:</p>
   <ul>
-    <li><strong>What's saved:</strong> up to three player profiles, each with its name, Requisition (REQ), rank, unlocked upgrades, vehicles and paint schemes, medal, challenge and achievement progress, Codex entries, best scores, After Action Reports from recent runs, and your settings (such as music and sound volume, and hints).</li>
+    <li><strong>What's saved:</strong> up to three player profiles, each with its name, Requisition (REQ), rank, unlocked upgrades, vehicles and paint schemes, medal, challenge and achievement progress, Codex entries, best scores, After Action Reports from recent runs, your settings (such as music and sound volume, and hints), and whether the full game is unlocked.</li>
     <li><strong>On Android</strong> it lives in the app's private storage, which other apps can't read.</li>
     <li><strong>In the browser test version</strong> it lives in that browser's local storage for the site, along with a key that remembers your tester password, so you don't type it each visit.</li>
   </ul>
-  <p>The game doesn't send this anywhere. We run no servers, and the game has no accounts, analytics or crash reports of its own. We never see your save. The one exception is your scores and achievements, when you're signed in to Google Play Games (see below).</p>
+  <p>The game doesn't send this anywhere. We run no servers, and the game has no accounts, analytics or crash reports of its own. We never see your save. The exceptions are your scores and achievements, when you're signed in to Google Play Games, and the purchase that unlocks the full game, which goes through Google Play (both below).</p>
   <p>If Android's backup is turned on for your device, Android may include the app's save in your device backup to your Google account. Google handles that backup under its own <a href="https://policies.google.com/privacy">privacy policy</a>.</p>
 
   <h3>Android permissions</h3>
   <ul>
     <li><strong>Vibration</strong>, for hit feedback.</li>
-    <li><strong>Internet and network state</strong>, for the Google Play Games leaderboards and achievements.</li>
+    <li><strong>Internet and network state</strong>, for the Google Play Games leaderboards and achievements, and to check your purchase with Google Play.</li>
+    <li><strong>Google Play billing</strong>, for the in-app purchase that unlocks the full game.</li>
   </ul>
   <p>The app doesn't ask for your location, contacts, camera, microphone, files or advertising ID.</p>
 
@@ -109,8 +110,13 @@
     <li><strong>Your Play Games data</strong> can be deleted, for one game or with your whole Play Games profile, from your Play Games profile settings or at <a href="https://myaccount.google.com/data-and-privacy">myaccount.google.com</a>.</li>
   </ul>
 
-  <h2>Buying the game</h2>
-  <p>Google Play handles the purchase, under its own terms and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. We don't receive your payment details. The game has no in-app purchases.</p>
+  <h2>Unlocking the full game</h2>
+  <p>Ironclad is free to download. A one-time in-app purchase through Google Play unlocks the full game.</p>
+  <ul>
+    <li><strong>Payment:</strong> Google Play takes the payment, under Google Play's terms and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. We never see your card or other payment details.</li>
+    <li><strong>On your device:</strong> the game asks Google Play whether your Google account owns the unlock, and keeps the answer on your device. It sends nothing to us. If you reinstall or change phones, the unlock comes back from your Google account.</li>
+    <li><strong>What we receive:</strong> as the seller, we receive the order record Google Play gives every developer for a purchase. For example, it shows the order number, date, price and country, and it can include the name or email address on the buying account. We use it only for refunds, support, and tax and accounting, and we never share it.</li>
+  </ul>
 
   <h2>The browser test version</h2>
   <p>The browser version is a test build for invited testers, opened with a password. It shows no ads, has no online leaderboards or achievements, and runs entirely on your device: its code, graphics, sound and music come from the same site, and it calls no other services. The site is hosted on GitHub Pages. GitHub may log visitors' IP addresses to run and secure the service, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>. We don't receive those logs.</p>
@@ -119,16 +125,17 @@
   <p>Ironclad is a combat game and isn't directed at children under 13, or the higher minimum age where you live. We don't knowingly collect personal information from anyone, children included.</p>
 
   <h2>Sharing and selling</h2>
-  <p>We don't sell, rent or share personal data, because we don't collect any. The only data that leaves your device is what Google Play Games sends to Google, described above.</p>
+  <p>We don't sell, rent or share personal data. The game sends data only to Google: what Google Play Games sends, and the purchase check with Google Play, both described above. The only personal data we receive is a purchase's order record, used only as described above.</p>
 
   <h2>Security</h2>
-  <p>Your save stays inside Android's app sandbox, or your browser's storage for the test site. Nothing is stored on our side. Google's SDK encrypts what it sends.</p>
+  <p>Your save stays inside Android's app sandbox, or your browser's storage for the test site. Nothing from the game is stored on our side. Google's services encrypt what they send.</p>
 
   <h2>Keeping and deleting data</h2>
   <ul>
     <li><strong>Your game save</strong> stays on your device until you delete it. Uninstalling the app removes it, as does clearing its storage (<em>Settings &rsaquo; Apps &rsaquo; Ironclad &rsaquo; Storage &rsaquo; Clear storage</em>). In a browser, clear the test site's data.</li>
     <li><strong>Play Games data</strong> is kept by Google with your Play Games profile until you delete it, as described above.</li>
-    <li>We hold no data about you, so there is nothing for us to delete. We'll still answer any question you send.</li>
+    <li><strong>Order records</strong> are kept by Google Play, and in our accounts for as long as tax and accounting law requires.</li>
+    <li>Beyond a purchase's order record, we hold no data about you. Email us with any question, or to ask what we hold.</li>
   </ul>
 
   <h2>Changes</h2>
