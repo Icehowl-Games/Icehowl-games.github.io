@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ironclad 3.0.9 patch notes</title>
+<meta name="description" content="Patch notes for Ironclad: Battle Tank 3.0.9.">
+<meta name="theme-color" content="#14110E">
+<link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+<style>
+  @font-face { font-family: "Bebas Neue"; src: url("../fonts/BebasNeue.otf") format("opentype"); font-display: swap; }
+  :root {
+    --bg: #14110E; --panel: #1C1915; --ink: #E6D9BF; --muted: #A99178; --rule: #3A3529;
+    --accent: #D9A441; --link: #E8B85A; --olive: #6E7446;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #F4EFE4; --panel: #FFFFFF; --ink: #24201A; --muted: #6B5E4D; --rule: #DDD3C0;
+            --accent: #8A5A12; --link: #7A4E0C; --olive: #5A6038; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+  .wings { display: flex; align-items: center; gap: 14px; }
+  .wings::before, .wings::after {
+    content: ""; flex: 1; height: 10px; max-width: 120px;
+    background: linear-gradient(var(--olive) 0 2px, transparent 2px 4px, var(--olive) 4px 6px, transparent 6px 8px, var(--olive) 8px 10px);
+  }
+  h1 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 44px; line-height: 1; margin: 0; color: var(--accent); text-align: center;
+  }
+  .sub { text-align: center; color: var(--muted); margin: 10px 0 32px; font-size: 14px; }
+  h2 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 26px; line-height: 1.1; color: var(--accent); margin: 36px 0 8px;
+    padding-top: 16px; border-top: 1px solid var(--rule);
+  }
+  h3 { font-size: 16px; margin: 20px 0 4px; }
+  p, ul { margin: 0 0 12px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--link); text-underline-offset: 2px; overflow-wrap: anywhere; }
+  .summary { background: var(--panel); border: 1px solid var(--rule); border-left: 4px solid var(--olive); padding: 16px 18px; border-radius: 6px; }
+  .summary p:last-child, .summary ul:last-child { margin-bottom: 0; }
+  dl { margin: 0 0 12px; }
+  dt { font-weight: 600; margin-top: 12px; }
+  dd { margin: 2px 0 0; color: var(--ink); }
+  .muted { color: var(--muted); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="wings"><h1>Patch Notes 3.0.9</h1></div>
+  <p class="sub">Ironclad: Battle Tank for Android &middot; 17 November 2026</p>
+
+  <h2>Highlights</h2>
+  <ul>
+    <li>Every upgrade, Evolution and Contraband item has a new icon, and each one can be turned as a 3D model in the Codex.</li>
+    <li>DOMINATOR has a main cannon, and beating it starts an escape from the Citadel before its core melts down.</li>
+    <li>Bosses are solid: neither you nor the enemy can drive through them.</li>
+    <li>Boot Camp has been rebuilt from the ground up.</li>
+    <li>Enemies find their way round obstacles and each other far better.</li>
+  </ul>
+
+  <h2>Icons and pickups</h2>
+  <ul>
+    <li>All upgrade, Evolution and Contraband icons are redrawn in one style: simple shapes that read from a distance.</li>
+    <li>Every icon sits in the same bevelled frame, with a faint glow in its rarity's colour, wherever it appears in the game.</li>
+    <li>The Field Repair, bomb, freeze, shield and upgrade crate pickups are redrawn to match, at twice the resolution.</li>
+    <li>Artillery Warning Radar is renamed Artillery Warning and its icon is a siren. Counter-Battery Radar takes the radar dish.</li>
+  </ul>
+
+  <h2>Codex and Armory</h2>
+  <ul>
+    <li>Upgrade pages show the upgrade's icon as a 3D model you can turn with a finger. The page shows the flat icon for a moment while the model is prepared.</li>
+    <li>Pages are laid out in labelled boxes, with the crew notes first.</li>
+    <li>Enemy and boss pages have stat blocks with bars, and a line for each attack.</li>
+    <li>Every entry has crew notes.</li>
+    <li>The Upgrades chapter is ordered by rarity.</li>
+    <li>Veteran Modifications and the unlockable upgrades are bought as Armory tiles like the rest.</li>
+  </ul>
+
+  <h2>The Citadel and DOMINATOR</h2>
+  <ul>
+    <li><strong>Main cannon:</strong> a single very large shell. Its mark is twice the size of GEDDON's, it charges for 4 seconds while every other weapon holds, and it costs two armor segments if it lands.</li>
+    <li><strong>Core meltdown:</strong> when DOMINATOR falls, its wreck stays where it died and the clock in the top left counts down from 1:30. Get back up to the roof and out.
+    <ul>
+      <li>Marked explosions go off around you all the way, and rock falls from the ceiling without warning.</li>
+      <li>Messages call out 1 minute, 30 seconds, 15 seconds, then every second from 10.</li>
+      <li>If the clock reaches zero the core goes up and the run is lost.</li>
+    </ul>
+    </li>
+    <li><strong>The wreck:</strong> burnt out and torn open over the reactor, with the core glowing in what is left of its cage. It beats faster as time runs out.</li>
+    <li><strong>The final explosion:</strong> a flare, a shock ring, a growing fireball, then white.</li>
+  </ul>
+
+  <h2>Combat</h2>
+  <ul>
+    <li><strong>Solid bosses:</strong> a boss blocks by the shape of its hull, not a circle inside it, so its corners can no longer be driven through. Ground enemies are kept out of bosses too, and no longer cross through the armoured train. DOMINATOR's wreck is solid as well.</li>
+    <li><strong>Enemy movement:</strong> ground units steer round cover and round each other, and recover on their own when they get stuck.</li>
+    <li><strong>Targeting bosses:</strong> a boss that is mostly on screen can be targeted beyond the gun's normal range.</li>
+    <li><strong>Lock-on:</strong> a locked target stays locked through walls and at any distance. The tank holds fire until it has a shot.</li>
+    <li><strong>Aces</strong> have six times their old health.</li>
+    <li><strong>Hunter-Killer</strong> and <strong>Stabilized Gun</strong> are now unlocked by feats: 450 first-round kills, and 1,200 kills on the move.</li>
+    <li><strong>Sniper hits:</strong> the blinding glare is one smooth wash of light instead of rings, and a little stronger.</li>
+  </ul>
+
+  <h2>Boot Camp</h2>
+  <ul>
+    <li>A new course on the Verdant Front's ground, driven in legs with clearings and objectives along the way.</li>
+    <li>The Instructor drives with you, radios in each lesson and shows it first.</li>
+    <li>Lessons run from driving and pickups through targeting, cover and armor, upgrades and the field radio, to objectives and a graduation fight.</li>
+  </ul>
+
+  <h2>The field radio</h2>
+  <ul>
+    <li>The radio where Command Points are spent is now a 3D model: the set on a crate beside a guyed antenna mast, with a light blinking at the mast's tip.</li>
+  </ul>
+
+  <h2>Sound</h2>
+  <ul>
+    <li>The high engine rev is removed from the game and from the opening.</li>
+    <li>The engine start at the beginning of each stage plays a little earlier and is shorter.</li>
+  </ul>
+
+  <h2>Under the hood</h2>
+  <ul>
+    <li>The Codex's icon models are built on the phone from small shape files (about 130 KB for all of them) instead of being shipped as models (about 190 MB).</li>
+    <li>Recorded sound effects moved out of the program code into a data file, and release builds are now optimized and shrunk as Google Play asks. The program code went from 19.7 MB to 1.6 MB.</li>
+  </ul>
+
+  <p class="sub" style="margin-top:40px"><a href="index.html">All patch notes</a> &middot; <a href="../index.html">Ironclad: Battle Tank</a> &middot; <a href="../privacy.html">Privacy policy</a></p>
+</main>
+</body>
+</html>
