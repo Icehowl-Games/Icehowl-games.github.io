@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ironclad 3.1.0 patch notes</title>
+<meta name="description" content="Patch notes for Ironclad: Battle Tank 3.1.0.">
+<meta name="theme-color" content="#14110E">
+<link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+<style>
+  @font-face { font-family: "Bebas Neue"; src: url("../fonts/BebasNeue.otf") format("opentype"); font-display: swap; }
+  :root {
+    --bg: #14110E; --panel: #1C1915; --ink: #E6D9BF; --muted: #A99178; --rule: #3A3529;
+    --accent: #D9A441; --link: #E8B85A; --olive: #6E7446;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #F4EFE4; --panel: #FFFFFF; --ink: #24201A; --muted: #6B5E4D; --rule: #DDD3C0;
+            --accent: #8A5A12; --link: #7A4E0C; --olive: #5A6038; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+  .wings { display: flex; align-items: center; gap: 14px; }
+  .wings::before, .wings::after {
+    content: ""; flex: 1; height: 10px; max-width: 120px;
+    background: linear-gradient(var(--olive) 0 2px, transparent 2px 4px, var(--olive) 4px 6px, transparent 6px 8px, var(--olive) 8px 10px);
+  }
+  h1 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 44px; line-height: 1; margin: 0; color: var(--accent); text-align: center;
+  }
+  .sub { text-align: center; color: var(--muted); margin: 10px 0 32px; font-size: 14px; }
+  h2 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 26px; line-height: 1.1; color: var(--accent); margin: 36px 0 8px;
+    padding-top: 16px; border-top: 1px solid var(--rule);
+  }
+  h3 { font-size: 16px; margin: 20px 0 4px; }
+  p, ul { margin: 0 0 12px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--link); text-underline-offset: 2px; overflow-wrap: anywhere; }
+  .summary { background: var(--panel); border: 1px solid var(--rule); border-left: 4px solid var(--olive); padding: 16px 18px; border-radius: 6px; }
+  .summary p:last-child, .summary ul:last-child { margin-bottom: 0; }
+  dl { margin: 0 0 12px; }
+  dt { font-weight: 600; margin-top: 12px; }
+  dd { margin: 2px 0 0; color: var(--ink); }
+  .muted { color: var(--muted); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="wings"><h1>Patch Notes 3.1.0</h1></div>
+  <p class="sub">Ironclad: Battle Tank for Android &middot; 18 November 2026</p>
+
+  <h2>Highlights</h2>
+  <ul>
+    <li>A new graphics engine: the whole game is now drawn on the phone's graphics chip, for smoother play in big fights and in the menus.</li>
+    <li>Codex pages for upgrades show what each upgrade does and how to get it, and open straight on its 3D model.</li>
+    <li>The Codex's enemy, boss, ace and vehicle tiles show the 3D models.</li>
+    <li>A new Icehowl Games opening, with snow, frost and cracking ice.</li>
+    <li>The main menu's preview looks like an old CRT screen.</li>
+  </ul>
+
+  <h2>Performance</h2>
+  <ul>
+    <li>Battles run more smoothly, especially with many units on screen.</li>
+    <li>The upgrade cards, the pause screen and the other windows during a run no longer slow the game down.</li>
+    <li>Menus with many icons and a lot of text, such as the Armory and the Codex, run more smoothly.</li>
+    <li>Upgrade models in the Codex turn more smoothly, including those with see-through parts such as smoke and energy rings.</li>
+    <li>Artillery Warning's 3D model appears in a moment instead of taking several seconds.</li>
+  </ul>
+
+  <h2>Codex</h2>
+  <ul>
+    <li>An upgrade's page has an EFFECT box with its full description and an ARMORY box showing how it's unlocked, its price and the ranks you own. Its Armory tile still shows all of this too.</li>
+    <li>An upgrade's page opens on its 3D model straight away, with a loading mark while the model is being built.</li>
+    <li>A locked entry's page tells you how to unlock it.</li>
+    <li>Enemy, boss, ace and vehicle tiles show their 3D models at three-quarter view, as dark shapes until you've met them. Vehicles appear in the paint you've chosen. The Depot's tank is shown the same way.</li>
+    <li>Every upgrade model can be turned all the way round and has detail on every side.</li>
+    <li>Reroll, Banish and Stand Down have new icons.</li>
+  </ul>
+
+  <h2>The opening and the main menu</h2>
+  <ul>
+    <li>The Icehowl Games opening has blowing snow, frost creeping in from the edges, and cracks that spread across the screen with the sound of the ice.</li>
+    <li>The main menu's preview is shown on a CRT screen, with scan lines, a rolling bar and a glare. It switches between maps like a tube turning off and on.</li>
+    <li>The tank in the preview drives smooth, natural lines over open ground, and is already moving when each map comes up, with its tracks behind it.</li>
+  </ul>
+
+  <h2>On the battlefield</h2>
+  <ul>
+    <li>The tank leaves one unbroken trail of tracks.</li>
+    <li>Mud, water and ice patches no longer appear on top of walls and buildings.</li>
+    <li>The Boneyard has a light where your tank is set down.</li>
+    <li>The Chinook flies off after dropping you at the Boneyard instead of hanging over the landing.</li>
+    <li>The Chinook flies over the extraction smoke, and the smoke canister's flare lights it at night.</li>
+    <li>The extraction zone's ring and H are painted on the ground, under the tank and the Chinook.</li>
+  </ul>
+
+  <p class="sub" style="margin-top:40px"><a href="index.html">All patch notes</a> &middot; <a href="../index.html">Ironclad: Battle Tank</a> &middot; <a href="../privacy.html">Privacy policy</a></p>
+</main>
+</body>
+</html>
