@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ironclad 3.1.3 patch notes</title>
+<meta name="description" content="Patch notes for Ironclad: Battle Tank 3.1.3.">
+<meta name="theme-color" content="#14110E">
+<link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+<style>
+  @font-face { font-family: "Bebas Neue"; src: url("../fonts/BebasNeue.otf") format("opentype"); font-display: swap; }
+  :root {
+    --bg: #14110E; --panel: #1C1915; --ink: #E6D9BF; --muted: #A99178; --rule: #3A3529;
+    --accent: #D9A441; --link: #E8B85A; --olive: #6E7446;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #F4EFE4; --panel: #FFFFFF; --ink: #24201A; --muted: #6B5E4D; --rule: #DDD3C0;
+            --accent: #8A5A12; --link: #7A4E0C; --olive: #5A6038; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+  .wings { display: flex; align-items: center; gap: 14px; }
+  .wings::before, .wings::after {
+    content: ""; flex: 1; height: 10px; max-width: 120px;
+    background: linear-gradient(var(--olive) 0 2px, transparent 2px 4px, var(--olive) 4px 6px, transparent 6px 8px, var(--olive) 8px 10px);
+  }
+  h1 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 44px; line-height: 1; margin: 0; color: var(--accent); text-align: center;
+  }
+  .sub { text-align: center; color: var(--muted); margin: 10px 0 32px; font-size: 14px; }
+  h2 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 26px; line-height: 1.1; color: var(--accent); margin: 36px 0 8px;
+    padding-top: 16px; border-top: 1px solid var(--rule);
+  }
+  h3 { font-size: 16px; margin: 20px 0 4px; }
+  p, ul { margin: 0 0 12px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--link); text-underline-offset: 2px; overflow-wrap: anywhere; }
+  .summary { background: var(--panel); border: 1px solid var(--rule); border-left: 4px solid var(--olive); padding: 16px 18px; border-radius: 6px; }
+  .summary p:last-child, .summary ul:last-child { margin-bottom: 0; }
+  dl { margin: 0 0 12px; }
+  dt { font-weight: 600; margin-top: 12px; }
+  dd { margin: 2px 0 0; color: var(--ink); }
+  .muted { color: var(--muted); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="wings"><h1>Patch Notes 3.1.3</h1></div>
+  <p class="sub">Ironclad: Battle Tank for Android &middot; 18 November 2026</p>
+  <h2>Highlights</h2>
+  <ul>
+    <li>Level unlocks are back: each stage starts with one level open, and beating a boss opens the next.</li>
+    <li>The railyard's roundhouse is one large building around the turntable, and every track end has a buffer stop.</li>
+    <li>Iron Tundra has a radar station to destroy, and Altstadt's church and station now look like a church and a station.</li>
+    <li>The foundry and the railyard are dressed with the tools and stores of the people who work there.</li>
+    <li>Boot Camp shows you each objective before you do it, and its music no longer cuts out.</li>
+  </ul>
+  <h2>Level unlocks</h2>
+  <ul>
+    <li>Each stage begins with one level open: Verdant Front, Altstadt, Iron Tundra, Red Basin and the Citadel.</li>
+    <li>Beating the boss on a level opens the next level of that stage: Hollow Fields after Verdant Front; Black Coast after Altstadt; Steel Corridor, then Deadwater Delta, after Iron Tundra; Ashen Foundry, then Broken Crown, after Red Basin.</li>
+    <li>Everyone starts from the opening five with this update.</li>
+    <li>The weekly run uses every level, as before.</li>
+    <li>A newly opened level is announced when the boss falls, and each level's Codex page shows whether it is open.</li>
+    <li>Ashen Foundry is now a Stage 4 level and Deadwater Delta a Stage 3 level.</li>
+  </ul>
+  <h2>Steel Corridor</h2>
+  <ul>
+    <li>The roundhouse is one C-shaped building around the turntable. Every stall's track runs in at its own doors, some shut and some open on an engine inside.</li>
+    <li>Every open track end has a buffer stop.</li>
+    <li>Spare wheelsets and bogies, oil racks, signal levers, luggage trolleys, parcels and benches are set out around the yard, the shops, the goods depot and the station forecourt.</li>
+  </ul>
+  <h2>Ashen Foundry</h2>
+  <ul>
+    <li>Mould bogies, slag pots, tool racks, pig iron, workbenches, gas cylinders, plate stacks and scrap skips are set out in rows where they are used.</li>
+    <li>Overhead beams, cranes and catwalks stand on posts at each end.</li>
+    <li>Its sidings run out of the works through gated openings.</li>
+    <li>The marked roads outside the playable area are gone. The paving between the works' lots is as wide as the game's own roads.</li>
+    <li>Rails now show on its paved floors.</li>
+  </ul>
+  <h2>Iron Tundra</h2>
+  <ul>
+    <li>A radar station stands on the snowfield. While it stands, a snowstorm no longer hides you from distant enemies. Destroy it and the storms hide you again; it drops three pickups.</li>
+    <li>Its sidings leave the main line at proper turnouts.</li>
+    <li>Tracks show over ice, mud and water patches.</li>
+  </ul>
+  <h2>Altstadt</h2>
+  <ul>
+    <li>The church is a church: a slate nave with a transept, a tower with a spire and cross, and a churchyard. Its building was being cleared away by mistake, which left only a statue.</li>
+    <li>The station has a station building with a clock turret and a canopy over the platform.</li>
+    <li>The three landmarks stand further apart across the town.</li>
+    <li>Buildings, walls and stores no longer stand on its roads. The same is fixed on Black Coast.</li>
+  </ul>
+  <h2>Ruinous Facility</h2>
+  <ul>
+    <li>The floor is level everywhere except the great hall's gallery, which is a raised strip with an even slope around it.</li>
+    <li>Its siding runs on into a tunnel.</li>
+  </ul>
+  <h2>Every level</h2>
+  <ul>
+    <li>Walls and blocks meet the floor at a clean right angle. The floor beside them was drawn as a short slope with its corners cut off.</li>
+  </ul>
+  <h2>Boot Camp</h2>
+  <ul>
+    <li>When a radio call asks for something out of view, the camera goes over to it, holds, and comes back.</li>
+    <li>The music no longer cuts out. The same fault is fixed for level tracks that loop from late in the piece.</li>
+    <li>In the wave lesson, the enemy appears once you reach the next clearing, not before.</li>
+    <li>An upgrade card's evolution icon is in a square box again.</li>
+    <li>The terminal lesson says that the Boneyard's briefcases work the same way as the Citadel's terminals.</li>
+  </ul>
+  <h2>Tablets and large screens</h2>
+  <ul>
+    <li>The game is no longer forced upright on tablets, foldables and desktop windows. In a wide window it keeps an upright shape in the middle. Phones stay upright.</li>
+  </ul>
+</main>
+</body>
+</html>
