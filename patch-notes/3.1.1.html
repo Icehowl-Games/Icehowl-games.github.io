@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ironclad 3.1.1 patch notes</title>
+<meta name="description" content="Patch notes for Ironclad: Battle Tank 3.1.1.">
+<meta name="theme-color" content="#14110E">
+<link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+<style>
+  @font-face { font-family: "Bebas Neue"; src: url("../fonts/BebasNeue.otf") format("opentype"); font-display: swap; }
+  :root {
+    --bg: #14110E; --panel: #1C1915; --ink: #E6D9BF; --muted: #A99178; --rule: #3A3529;
+    --accent: #D9A441; --link: #E8B85A; --olive: #6E7446;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #F4EFE4; --panel: #FFFFFF; --ink: #24201A; --muted: #6B5E4D; --rule: #DDD3C0;
+            --accent: #8A5A12; --link: #7A4E0C; --olive: #5A6038; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+  .wings { display: flex; align-items: center; gap: 14px; }
+  .wings::before, .wings::after {
+    content: ""; flex: 1; height: 10px; max-width: 120px;
+    background: linear-gradient(var(--olive) 0 2px, transparent 2px 4px, var(--olive) 4px 6px, transparent 6px 8px, var(--olive) 8px 10px);
+  }
+  h1 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 44px; line-height: 1; margin: 0; color: var(--accent); text-align: center;
+  }
+  .sub { text-align: center; color: var(--muted); margin: 10px 0 32px; font-size: 14px; }
+  h2 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 26px; line-height: 1.1; color: var(--accent); margin: 36px 0 8px;
+    padding-top: 16px; border-top: 1px solid var(--rule);
+  }
+  h3 { font-size: 16px; margin: 20px 0 4px; }
+  p, ul { margin: 0 0 12px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--link); text-underline-offset: 2px; overflow-wrap: anywhere; }
+  .summary { background: var(--panel); border: 1px solid var(--rule); border-left: 4px solid var(--olive); padding: 16px 18px; border-radius: 6px; }
+  .summary p:last-child, .summary ul:last-child { margin-bottom: 0; }
+  dl { margin: 0 0 12px; }
+  dt { font-weight: 600; margin-top: 12px; }
+  dd { margin: 2px 0 0; color: var(--ink); }
+  .muted { color: var(--muted); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="wings"><h1>Patch Notes 3.1.1</h1></div>
+  <p class="sub">Ironclad: Battle Tank for Android &middot; 18 November 2026</p>
+  <h2>Highlights</h2>
+  <ul>
+    <li>Every front has a 3D diorama in the Codex.</li>
+    <li>Each of the ten aces wears its own paint.</li>
+    <li>Bulwark's shield is a dome of hexagonal panes standing over your tank.</li>
+    <li>Enemies find their way round bosses, walls and each other better.</li>
+    <li>The escape from the Citadel has explosions all across the floor and rock falling from the ceiling.</li>
+    </ul>
+
+  <h2>Codex</h2>
+  <ul>
+    <li>Each front's page opens on a small 3D model of the place: its ground and what stands on it. The Fronts tiles show them too. All thirteen fronts and the Boneyard have one.</li>
+    <li>Text in Codex entries is spaced correctly. Words in some entries were running together.</li>
+    <li>The aces' tiles and pages show them in their new paint.</li>
+    </ul>
+
+  <h2>Aces</h2>
+  <ul>
+    <li>Each ace has its own colours and markings, on the battlefield and in the Codex:
+    <ul>
+      <li>IRON WOLF: steel grey, with claw slashes across its turret.</li>
+      <li>THE SCYTHE: bone white, with a red blade across its deck.</li>
+      <li>NIGHTHAWK: midnight blue.</li>
+      <li>THE GHOST: pale grey.</li>
+      <li>HAMMERFALL: dark iron, with yellow bands.</li>
+      <li>FIREBRAND: charred black, with flame running back from its bow.</li>
+      <li>SNOWBLIND: ice blue.</li>
+      <li>BANSHEE: crimson, with pale bands round its wings.</li>
+      <li>THE MOLE: earth brown, with orange chevrons.</li>
+      <li>LANCER: deep green, with a pale stripe down its middle.</li>
+      </ul></li>
+    </ul>
+
+  <h2>Upgrades</h2>
+  <ul>
+    <li>Bulwark's shield is a see-through dome of hexagonal panes over the tank. The panes flare where a shot strikes it.</li>
+    <li>Regimental Colors is gone from the Armory. It had already been removed from runs. If you bought it, its REQ is returned.</li>
+    <li>In the Armory, the upgrades every run offers from the start are listed at the top of each section.</li>
+    </ul>
+
+  <h2>On the battlefield</h2>
+  <ul>
+    <li>Your tank's track marks run directly behind its own tracks or wheels, at their width, for every vehicle.</li>
+    <li>Enemies steer round a boss, and round other units standing in their way, instead of pushing into them. One that finds its way shut takes another route sooner.</li>
+    <li>Sandstorms and snowstorms no longer draw a bar across the bottom of the screen.</li>
+    <li>MIRAGE's wheels are drawn correctly on both sides.</li>
+    </ul>
+
+  <h2>The Citadel</h2>
+  <ul>
+    <li>On floors 2 and 3, the doorways between the side halls are in the middle of their walls.</li>
+    <li>During the escape, explosions go off all across the floor and loose rock falls from the ceiling in plain sight. The marked explosions come a little faster, and rock falls near the tank more often.</li>
+    </ul>
+
+  <h2>Boot Camp</h2>
+  <ul>
+    <li>The INSTRUCTOR drives round cover and trees instead of into them.</li>
+    </ul>
+
+  <p class="sub" style="margin-top:40px"><a href="index.html">All patch notes</a> &middot; <a href="../index.html">Ironclad: Battle Tank</a> &middot; <a href="../privacy.html">Privacy policy</a></p>
+</main>
+</body>
+</html>
