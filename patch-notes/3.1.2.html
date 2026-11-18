@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ironclad 3.1.2 patch notes</title>
+<meta name="description" content="Patch notes for Ironclad: Battle Tank 3.1.2.">
+<meta name="theme-color" content="#14110E">
+<link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+<style>
+  @font-face { font-family: "Bebas Neue"; src: url("../fonts/BebasNeue.otf") format("opentype"); font-display: swap; }
+  :root {
+    --bg: #14110E; --panel: #1C1915; --ink: #E6D9BF; --muted: #A99178; --rule: #3A3529;
+    --accent: #D9A441; --link: #E8B85A; --olive: #6E7446;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #F4EFE4; --panel: #FFFFFF; --ink: #24201A; --muted: #6B5E4D; --rule: #DDD3C0;
+            --accent: #8A5A12; --link: #7A4E0C; --olive: #5A6038; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+  .wings { display: flex; align-items: center; gap: 14px; }
+  .wings::before, .wings::after {
+    content: ""; flex: 1; height: 10px; max-width: 120px;
+    background: linear-gradient(var(--olive) 0 2px, transparent 2px 4px, var(--olive) 4px 6px, transparent 6px 8px, var(--olive) 8px 10px);
+  }
+  h1 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 44px; line-height: 1; margin: 0; color: var(--accent); text-align: center;
+  }
+  .sub { text-align: center; color: var(--muted); margin: 10px 0 32px; font-size: 14px; }
+  h2 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 26px; line-height: 1.1; color: var(--accent); margin: 36px 0 8px;
+    padding-top: 16px; border-top: 1px solid var(--rule);
+  }
+  h3 { font-size: 16px; margin: 20px 0 4px; }
+  p, ul { margin: 0 0 12px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--link); text-underline-offset: 2px; overflow-wrap: anywhere; }
+  .summary { background: var(--panel); border: 1px solid var(--rule); border-left: 4px solid var(--olive); padding: 16px 18px; border-radius: 6px; }
+  .summary p:last-child, .summary ul:last-child { margin-bottom: 0; }
+  dl { margin: 0 0 12px; }
+  dt { font-weight: 600; margin-top: 12px; }
+  dd { margin: 2px 0 0; color: var(--ink); }
+  .muted { color: var(--muted); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="wings"><h1>Patch Notes 3.1.2</h1></div>
+  <p class="sub">Ironclad: Battle Tank for Android &middot; 18 November 2026</p>
+  <h2>Highlights</h2>
+  <ul>
+    <li>New fire and explosions across the whole game.</li>
+    <li>DOMINATOR comes apart in a death sequence before its core is exposed.</li>
+    <li>The Citadel's upper floors are furnished, and everything in them can be destroyed.</li>
+    <li>Radiation shows how many stacks an enemy carries, and Fallout Tracks leaves a trail of glowing green liquid.</li>
+    <li>Three new pieces of music, and new sounds for explosions, missiles and the Snow Dozer.</li>
+  </ul>
+  <h2>Fire and explosions</h2>
+  <ul>
+    <li>Every explosion is redrawn. Small blasts, up to the size of a cluster bomb, are a quick burst. Anything bigger is a rolling fireball that boils up and turns to smoke.</li>
+    <li>Smoke is drawn as billows that drift and thin out.</li>
+  </ul>
+  <h2>The Citadel</h2>
+  <ul>
+    <li>The halls on floor 2 are furnished as the command's offices: a library with rows of bookshelves, offices with desks, a great hall, a lounge, a board room and a treasury.</li>
+    <li>The halls on floor 3 are a research lab: a building hall, a testing room, hazardous waste storage, a design office and a specimen room.</li>
+    <li>The hallways stay clear.</li>
+    <li>Every piece of furniture and equipment can be destroyed, and leaves a pile of rubble.</li>
+  </ul>
+  <h2>DOMINATOR</h2>
+  <ul>
+    <li>When DOMINATOR is beaten, the camera moves to it and it comes apart: it shudders, its core starts to glow, and fireballs tear it open. Control returns once the exposed core shows, and the meltdown countdown starts then.</li>
+    <li>The white flash stays reserved for the meltdown itself.</li>
+    <li>A grey bar is no longer drawn across DOMINATOR's north side.</li>
+    <li>Its music loops from the middle of the piece, where the full section returns, instead of going back to the opening.</li>
+  </ul>
+  <h2>Radiation</h2>
+  <ul>
+    <li>An irradiated enemy throws off bright green bits, one stream for each stack, so you can count the stacks at a glance.</li>
+    <li>A green cloud hangs over an irradiated enemy and thickens with each stack. It shows on every enemy and boss, including the ones drawn as 3D models.</li>
+    <li>A critical enemy no longer has a ring drawn round it. Its cloud pulses instead.</li>
+    <li>A meltdown's blast is a green fireball.</li>
+    <li>Fallout Tracks leaves two continuous lines of bright green liquid behind your tracks, with a moving net of light on them like the game's water.</li>
+  </ul>
+  <h2>Levels</h2>
+  <ul>
+    <li>Red Basin: the narrow gaps between its mesas are widened so the tank fits through all of them.</li>
+  </ul>
+  <h2>Music</h2>
+  <ul>
+    <li>The Iron Tundra has a new track, The Sky Remembers. Its old track is retired.</li>
+    <li>Dark Matter Canon plays on the after-action report after a won run.</li>
+    <li>Heroes Rise When Empires Fall plays during the core meltdown.</li>
+  </ul>
+  <h2>Sound</h2>
+  <ul>
+    <li>Two new explosion sounds. Each explosion now plays one of three at random.</li>
+    <li>A new launch sound wherever missiles are fired, yours included.</li>
+    <li>The Snow Dozer lets off steam as it takes aim and revs its engine as it charges. Its old engine roar is removed.</li>
+    <li>The menu button sound plays without the short delay it had.</li>
+  </ul>
+
+  <p class="sub" style="margin-top:40px"><a href="index.html">All patch notes</a> &middot; <a href="../index.html">Ironclad: Battle Tank</a> &middot; <a href="../privacy.html">Privacy policy</a></p>
+</main>
+</body>
+</html>
