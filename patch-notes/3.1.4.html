@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ironclad 3.1.4 patch notes</title>
+<meta name="description" content="Patch notes for Ironclad: Battle Tank 3.1.4.">
+<meta name="theme-color" content="#14110E">
+<link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+<style>
+  @font-face { font-family: "Bebas Neue"; src: url("../fonts/BebasNeue.otf") format("opentype"); font-display: swap; }
+  :root {
+    --bg: #14110E; --panel: #1C1915; --ink: #E6D9BF; --muted: #A99178; --rule: #3A3529;
+    --accent: #D9A441; --link: #E8B85A; --olive: #6E7446;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #F4EFE4; --panel: #FFFFFF; --ink: #24201A; --muted: #6B5E4D; --rule: #DDD3C0;
+            --accent: #8A5A12; --link: #7A4E0C; --olive: #5A6038; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+  .wings { display: flex; align-items: center; gap: 14px; }
+  .wings::before, .wings::after {
+    content: ""; flex: 1; height: 10px; max-width: 120px;
+    background: linear-gradient(var(--olive) 0 2px, transparent 2px 4px, var(--olive) 4px 6px, transparent 6px 8px, var(--olive) 8px 10px);
+  }
+  h1 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 44px; line-height: 1; margin: 0; color: var(--accent); text-align: center;
+  }
+  .sub { text-align: center; color: var(--muted); margin: 10px 0 32px; font-size: 14px; }
+  h2 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 26px; line-height: 1.1; color: var(--accent); margin: 36px 0 8px;
+    padding-top: 16px; border-top: 1px solid var(--rule);
+  }
+  h3 { font-size: 16px; margin: 20px 0 4px; }
+  p, ul { margin: 0 0 12px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--link); text-underline-offset: 2px; overflow-wrap: anywhere; }
+  .summary { background: var(--panel); border: 1px solid var(--rule); border-left: 4px solid var(--olive); padding: 16px 18px; border-radius: 6px; }
+  .summary p:last-child, .summary ul:last-child { margin-bottom: 0; }
+  dl { margin: 0 0 12px; }
+  dt { font-weight: 600; margin-top: 12px; }
+  dd { margin: 2px 0 0; color: var(--ink); }
+  .muted { color: var(--muted); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="wings"><h1>Patch Notes 3.1.4</h1></div>
+  <p class="sub">Ironclad: Battle Tank for Android &middot; 23 November 2026</p>
+  <h2>Highlights</h2>
+  <ul>
+    <li>Altstadt is rebuilt around a street grid, with a grand cathedral, a fountain full of water and a railway station whose line runs off the map.</li>
+    <li>Altstadt's landmarks are held over three waves, and the enemy fights to take them back.</li>
+    <li>Your gun fires only at what you can see, and the camera pulls back so your whole range fits on screen. A LOCK button joins UNLOCK.</li>
+    <li>Autoloader, Hunter-Killer, Dozer Blade and Thermal Sights are toned down, evolutions take a little more building, and Contraband is worth taking.</li>
+    <li>The store is switched on for testing.</li>
+  </ul>
+  <h2>Altstadt</h2>
+  <ul>
+    <li>Three avenues and three cross streets run right through the town, so there are several ways north and no dead ends.</li>
+    <li>The three landmarks spread across the town, north to south and east to west.</li>
+    <li>The church is now a cathedral in the style of Notre-Dame: two flat-topped west towers, a long lead roof over the nave and choir, transept arms, lower aisles and a rounded east end. Flying buttresses arch from pinnacled piers up to its walls, and a tall spire at the crossing carries a gilt trident. Its churchyard is walled, with gates and rows of headstones.</li>
+    <li>The town square's fountain holds real water that ripples from its spout, under a statue of a sea god with his trident.</li>
+    <li>The station's track starts at a buffer stop on the platform, crosses the street and curves out of town to the south.</li>
+    <li>Each landmark is named at the start of wave 1, 4 or 7 and must be held to the end of wave 3, 6 or 9. If the enemy retakes it, that wave won't end until you take it back: a message tells you, and the arrow points the way. While you're away, the enemy now and then sends a squad to dig in on it.</li>
+    <li>Nights are about 13% lighter.</li>
+    <li>The town no longer leaves nooks a tank can get stuck in.</li>
+    <li>BASTION keeps to the streets, but when they don't bring it closer it drives straight at you, flattening rubble and houses on the way.</li>
+  </ul>
+  <h2>Combat and the view</h2>
+  <ul>
+    <li>The gun never fires at anything off screen or under the HUD. A boss counts once a good part of it is in view.</li>
+    <li>The camera draws back until your gun's whole reach fits on screen, further than before for long-range builds.</li>
+    <li>The button under the minimap is always there: LOCK locks the gun's current target, and UNLOCK releases it.</li>
+    <li>Headlights on every night level throw two longer beams with more light around the tank.</li>
+    <li>Enemy vehicles leave track marks under each track or wheel, as your tank does.</li>
+  </ul>
+  <h2>HUD</h2>
+  <ul>
+    <li>The threat dial's box is taller, with a bigger reading.</li>
+    <li>The top bar sits just below the camera cutout, giving the battlefield more room.</li>
+    <li>The shield and freeze timers show centred under the armor bar.</li>
+  </ul>
+  <h2>Balance</h2>
+  <ul>
+    <li>Autoloader: 15% faster reload a rank (was 20%).</li>
+    <li>Hunter-Killer: a kill takes the reload three quarters of the way. With Ready Rack it loads one round (was the whole rack).</li>
+    <li>Thermal Sights: +15% range (+25% at rank 2) and +10% damage.</li>
+    <li>Dozer Blade: still stops rounds head-on, but not rockets and missiles (Siege Plow still stops those). A ram hits once per impact, harder the faster you go.</li>
+    <li>Evolutions: one part at rank 3 and the other at rank 2. The other part comes up 1.5 times as often once you hold one (was twice).</li>
+  </ul>
+  <h2>Contraband</h2>
+  <ul>
+    <li>Experimental Overdrive overheats after 10 s of driving (was 7) and cools in 3 s (was 5).</li>
+    <li>Unstable Ammunition: +60% main-gun damage (was +40%), 10% duds (was 15%).</li>
+    <li>Priority Targeting System still lays the gun on the enemy with the most health. Its +40% damage applies to a target you've locked yourself.</li>
+    <li>Prototype Autoloader: 45% faster reloads (was 35%). 5% of volleys jam (was 8%), for 1.5 s (was 2.5).</li>
+    <li>Overcharged Capacitor: systems recharge 50% faster (was 40%). It overheats every 30 s (was 22) for 2 s (was 3).</li>
+    <li>Phoenix Protocol leaves your armor as it is when taken. The all-Composite armor starts only after it revives you.</li>
+    <li>Battlefield Scavenger Array: 3% crate chance (was 1.5%), with a 15% chance of a Rare. Reinforcements +20% (was +35%).</li>
+    <li>Experimental Warhead: +50% explosion damage (was +40%). Your own blasts only crack your armor. Enemy explosives have a 20% chance of a second segment (was 30%).</li>
+    <li>Directed Energy Conversion: cracks set it off as well as hits. It lasts 6 s (was 4) and adds 30% fire rate.</li>
+    <li>Ghost Signal Transmitter: hidden 5 s every 14 s (was 4 s every 16). The shelling only runs while you're hidden.</li>
+    <li>Fortress Mode deploys after 1 s still (was 1.5).</li>
+    <li>Unstable Reactor keeps a steady beat for most of its life, then races just before it blows. +50% damage in its field (was +30%), and its pulses only crack your armor.</li>
+    <li>Battlefield Reclaimer: 6% repair chance (was 4%).</li>
+  </ul>
+  <h2>Feats, Armory, leaderboard and Codex</h2>
+  <ul>
+    <li>Many feat and level-achievement targets are lowered to match how runs actually go.</li>
+    <li>The extra rerolls tile in the Armory counts Stage 1 and 2 clears, as it says.</li>
+    <li>Leaderboard rows show each player's current rank where it's known.</li>
+    <li>Codex progress counts entries that are partly unlocked.</li>
+  </ul>
+  <h2>The Citadel</h2>
+  <ul>
+    <li>All three terminals stand on each shop floor. One with nothing to offer says NO OFFERS.</li>
+    <li>Shadows behind the angled walls follow the wall's line, and nothing is hidden on the roof.</li>
+    <li>Decor against the walls is drawn in front of them.</li>
+    <li>Stray lines on the roof's walls are gone.</li>
+    <li>During the escape, the GO DOWN and STAIRS DOWN prompts no longer show.</li>
+  </ul>
+  <h2>Ruinous Facility</h2>
+  <ul>
+    <li>The floor is flat throughout.</li>
+    <li>The extraction smoke is red, as on every other level.</li>
+    <li>The REQ caches stand in their rooms, and their labels no longer overlap.</li>
+    <li>There is one hatch on the way in.</li>
+  </ul>
+  <h2>Every level</h2>
+  <ul>
+    <li>Text on the battlefield no longer bends the ground around it.</li>
+    <li>Only real hills bend with the camera's perspective. Built floors stay flat.</li>
+    <li>Thermal Sights no longer draws orange boxes over buildings at night.</li>
+    <li>Overhead beams no longer run across buildings.</li>
+    <li>BASTION's rocket launcher sits flush on its hull.</li>
+  </ul>
+  <h2>Store testing</h2>
+  <ul>
+    <li>The game's store is switched on for testing: the game starts as the free edition, and the full game can be unlocked with an in-app purchase.</li>
+  </ul>
+</main>
+</body>
+</html>
