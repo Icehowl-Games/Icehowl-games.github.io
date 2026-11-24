@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ironclad 3.2.1 patch notes</title>
+<meta name="description" content="Patch notes for Ironclad: Battle Tank 3.2.1.">
+<meta name="theme-color" content="#14110E">
+<link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+<style>
+  @font-face { font-family: "Bebas Neue"; src: url("../fonts/BebasNeue.otf") format("opentype"); font-display: swap; }
+  :root {
+    --bg: #14110E; --panel: #1C1915; --ink: #E6D9BF; --muted: #A99178; --rule: #3A3529;
+    --accent: #D9A441; --link: #E8B85A; --olive: #6E7446;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #F4EFE4; --panel: #FFFFFF; --ink: #24201A; --muted: #6B5E4D; --rule: #DDD3C0;
+            --accent: #8A5A12; --link: #7A4E0C; --olive: #5A6038; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+  .wings { display: flex; align-items: center; gap: 14px; }
+  .wings::before, .wings::after {
+    content: ""; flex: 1; height: 10px; max-width: 120px;
+    background: linear-gradient(var(--olive) 0 2px, transparent 2px 4px, var(--olive) 4px 6px, transparent 6px 8px, var(--olive) 8px 10px);
+  }
+  h1 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 44px; line-height: 1; margin: 0; color: var(--accent); text-align: center;
+  }
+  .sub { text-align: center; color: var(--muted); margin: 10px 0 32px; font-size: 14px; }
+  h2 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 26px; line-height: 1.1; color: var(--accent); margin: 36px 0 8px;
+    padding-top: 16px; border-top: 1px solid var(--rule);
+  }
+  h3 { font-size: 16px; margin: 20px 0 4px; }
+  p, ul { margin: 0 0 12px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--link); text-underline-offset: 2px; overflow-wrap: anywhere; }
+  .summary { background: var(--panel); border: 1px solid var(--rule); border-left: 4px solid var(--olive); padding: 16px 18px; border-radius: 6px; }
+  .summary p:last-child, .summary ul:last-child { margin-bottom: 0; }
+  dl { margin: 0 0 12px; }
+  dt { font-weight: 600; margin-top: 12px; }
+  dd { margin: 2px 0 0; color: var(--ink); }
+  .muted { color: var(--muted); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="wings"><h1>Patch Notes 3.2.1</h1></div>
+  <p class="sub">Ironclad: Battle Tank for Android &middot; 24 November 2026</p>
+  <h2>Highlights</h2>
+  <ul>
+    <li>The gun now targets enemies on screen before enemies off screen.</li>
+    <li>Range upgrades are rebalanced so a full set fits the camera's view.</li>
+    <li>Each Rangefinder now pulls the camera back so its range stays on screen.</li>
+    <li>A What's New window now shows after each update.</li>
+  </ul>
+  <h2>Targeting</h2>
+  <ul>
+    <li>The gun now targets enemies on screen first. Previously it targeted the nearest enemy whether you could see it or not.</li>
+    <li>The gun only fires at an enemy off screen when nothing on screen can be hit.</li>
+    <li>The coax, drones, Javelin Pod, Artillery Uplink and other support weapons now target enemies on screen first.</li>
+    <li>Priority Targeting now picks the strongest enemy on screen before any enemy off screen.</li>
+  </ul>
+  <h2>Range</h2>
+  <ul>
+    <li>Range upgrades are rebalanced so a full set reaches the camera's furthest zoom. Previously they could reach far past the edge of the screen.</li>
+    <li>Long Barrel: +4% range a rank. Previously +15%.</li>
+    <li>Thermal Sights: +4% range (+7% at rank 2). Previously +15% (+25% at rank 2).</li>
+    <li>Tungsten Penetrator: +15% range. Previously +50%.</li>
+    <li>Long Gun: +6% range. Previously +25%.</li>
+    <li>Desert Optics: +2% range (+1% per rank). Previously +10% (+5% per rank).</li>
+    <li>Depot optics: +1% range per rank. Previously +2%.</li>
+    <li>Rangefinder: +1% range each. Previously +4%.</li>
+    <li>Each Rangefinder now pulls the camera back further so its range stays on screen.</li>
+  </ul>
+  <h2>Updates</h2>
+  <ul>
+    <li>A What's New window now shows the highlights of a new version with a link to its full patch notes.</li>
+    <li>Settings now shows the version number. Tapping it opens every version's patch notes.</li>
+  </ul>
+</main>
+</body>
+</html>
