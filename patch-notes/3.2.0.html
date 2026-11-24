@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ironclad 3.2.0 patch notes</title>
+<meta name="description" content="Patch notes for Ironclad: Battle Tank 3.2.0.">
+<meta name="theme-color" content="#14110E">
+<link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+<style>
+  @font-face { font-family: "Bebas Neue"; src: url("../fonts/BebasNeue.otf") format("opentype"); font-display: swap; }
+  :root {
+    --bg: #14110E; --panel: #1C1915; --ink: #E6D9BF; --muted: #A99178; --rule: #3A3529;
+    --accent: #D9A441; --link: #E8B85A; --olive: #6E7446;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #F4EFE4; --panel: #FFFFFF; --ink: #24201A; --muted: #6B5E4D; --rule: #DDD3C0;
+            --accent: #8A5A12; --link: #7A4E0C; --olive: #5A6038; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+  .wings { display: flex; align-items: center; gap: 14px; }
+  .wings::before, .wings::after {
+    content: ""; flex: 1; height: 10px; max-width: 120px;
+    background: linear-gradient(var(--olive) 0 2px, transparent 2px 4px, var(--olive) 4px 6px, transparent 6px 8px, var(--olive) 8px 10px);
+  }
+  h1 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 44px; line-height: 1; margin: 0; color: var(--accent); text-align: center;
+  }
+  .sub { text-align: center; color: var(--muted); margin: 10px 0 32px; font-size: 14px; }
+  h2 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 26px; line-height: 1.1; color: var(--accent); margin: 36px 0 8px;
+    padding-top: 16px; border-top: 1px solid var(--rule);
+  }
+  h3 { font-size: 16px; margin: 20px 0 4px; }
+  p, ul { margin: 0 0 12px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--link); text-underline-offset: 2px; overflow-wrap: anywhere; }
+  .summary { background: var(--panel); border: 1px solid var(--rule); border-left: 4px solid var(--olive); padding: 16px 18px; border-radius: 6px; }
+  .summary p:last-child, .summary ul:last-child { margin-bottom: 0; }
+  dl { margin: 0 0 12px; }
+  dt { font-weight: 600; margin-top: 12px; }
+  dd { margin: 2px 0 0; color: var(--ink); }
+  .muted { color: var(--muted); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="wings"><h1>Patch Notes 3.2.0</h1></div>
+  <p class="sub">Ironclad: Battle Tank for Android &middot; 24 November 2026</p>
+  <h2>Highlights</h2>
+  <ul>
+    <li>Use items are added: 12 items you activate yourself, found in equipment crates.</li>
+    <li>The Flamethrower is added as a new Legendary gun.</li>
+    <li>Iron Tundra's radar station is replaced by a fortress with a shielded satellite dish.</li>
+    <li>The Service Record is rebuilt into tiles, with a new Run History page.</li>
+    <li>The Chinook and the security turrets are now 3D models.</li>
+    <li>Air and artillery support no longer work indoors.</li>
+  </ul>
+  <h2>Use items</h2>
+  <ul>
+    <li>12 use items are added. Before, nothing in a run was activated by hand.</li>
+    <li>Equipment items recharge on a cooldown: Damage Control, Overdrive, Starshell, Canister Round, Satchel Charge, Crash Load.</li>
+    <li>Support items recharge with kills: Fire Mission, Strafing Run, Blockbuster, Supply Drop, Wingman, Radio Jamming.</li>
+    <li>Item buttons sit under the LOCK button and show the item's icon.</li>
+    <li>Each vehicle has its own item slots.</li>
+    <li>Equipment is marked orange and Support blue.</li>
+    <li>The Codex has a new EQUIPMENT tab with a page for each item.</li>
+    <li>An item's Codex page opens when you first buy it and fills after you choose it 10 times.</li>
+  </ul>
+  <h2>Equipment crates</h2>
+  <ul>
+    <li>Green equipment crates can now appear on a level. Each holds one use item.</li>
+    <li>Tap a crate to see its offer, then buy it or leave it.</li>
+    <li>Crates are bought with CP. The price starts at 8 CP and goes up 2 each stage.</li>
+    <li>With your slots full, you pick which item to replace.</li>
+  </ul>
+  <h2>Indoors</h2>
+  <ul>
+    <li>Gunships, artillery and naval fire no longer reach you indoors. Before, they worked everywhere.</li>
+    <li>This covers the Citadel below the roof and the Ruinous Facility.</li>
+    <li>Fire Mission, Strafing Run and Blockbuster are disabled indoors and show NO SKY.</li>
+    <li>Supply Drop comes by runner indoors instead of by parachute.</li>
+    <li>The radio's Air Strike and Precision Strike show NO SKY indoors.</li>
+    <li>Enemy mortars, aircraft and recon artillery no longer work indoors either.</li>
+    <li>A message tells you when you go in and when you come back out.</li>
+  </ul>
+  <h2>Flamethrower</h2>
+  <ul>
+    <li>The Flamethrower is added as a Legendary upgrade. It replaces the main gun, like the Railgun and the Avenger Cannon.</li>
+    <li>It sprays a jet of fire to half the gun's range and sets everything in it alight.</li>
+    <li>It does 50% of main gun damage a second.</li>
+    <li>It burns aircraft too.</li>
+    <li>It is unlocked by killing 900 enemies with fire, then bought with REQ in the Armory.</li>
+    <li>It has synergies with Incendiary Rounds, Long Barrel and Crocodile.</li>
+    <li>It is not offered with the Railgun, Avenger Cannon, AP Rounds or Flak Curtain, or to the Sapper and Skyguard.</li>
+  </ul>
+  <h2>Iron Tundra</h2>
+  <ul>
+    <li>The radar station is replaced by a large concrete fortress with a satellite dish beside it.</li>
+    <li>The fortress can't be destroyed. Its garrison fires rifles from the windows and cracks your armor.</li>
+    <li>The dish is under a shield and can't be damaged while it is up.</li>
+    <li>Three power sources now stand around the map, in different places each run, with cables running to the dish.</li>
+    <li>Destroying all three lowers the shield. Then the dish can be destroyed.</li>
+    <li>The dish keeps the radar station's effect: while it stands, snowstorms don't hide you.</li>
+  </ul>
+  <h2>Ruinous Facility</h2>
+  <ul>
+    <li>The rooms' walls are now lined with specimen tanks, rock drills, crated artefacts, control desks and notes boards. Before, the rooms were mostly bare.</li>
+    <li>The wall lights are now caged work lamps mounted on the walls. Before, they were white circles on the floor.</li>
+    <li>Lamps are only placed on walls.</li>
+    <li>The red-roofed building in the vehicle hangar is removed.</li>
+  </ul>
+  <h2>Models and art</h2>
+  <ul>
+    <li>The Chinook is now a 3D model with a rotor turning over each mast. Before, it was a flat picture.</li>
+    <li>Security turrets are now 3D models with a base, a turning gun housing and twin barrels. Before, they were a grey disc with a blue dot.</li>
+    <li>Strafing Run's fighter is a 3D model that banks in and climbs away.</li>
+    <li>Tank names, numbers, insignia and turret rings are now painted on the tank's model. Before, they hovered over it.</li>
+    <li>The insignia now takes the place of the turret's star.</li>
+    <li>The hull number now reads from the front.</li>
+    <li>Radio whips and the pennant are now part of the model.</li>
+    <li>The Vehicles screen shows the same markings on its turntables.</li>
+  </ul>
+  <h2>Service Record</h2>
+  <ul>
+    <li>The Service Record is rebuilt into five tiles: Tutorials, Feats, Medals, Codex and Run History. Before, it was a set of long tabs.</li>
+    <li>Tutorials now has its own page. Before, it was a tab in the Codex.</li>
+    <li>Run History is added, with your best run for each vehicle first and your recent runs after.</li>
+    <li>The Boot Camp ribbon now shows on the Boot Camp button. Before, it was in Medals.</li>
+  </ul>
+  <h2>Codex</h2>
+  <ul>
+    <li>Upgrades are now grouped under headings: Basic, Rare, Epic, Legendary, Evolutions and Contraband.</li>
+    <li>Contraband now has its own section. Before, it was mixed in with the others.</li>
+  </ul>
+  <h2>Escalation and leaderboard</h2>
+  <ul>
+    <li>Each Escalation level now adds 3% to your score. Before, Escalation paid nothing.</li>
+    <li>The Escalation picker now shows the score bonus for the level you pick.</li>
+    <li>Leaderboard rows no longer show weather and night symbols.</li>
+  </ul>
+  <h2>Radio and store</h2>
+  <ul>
+    <li>The radio's Supply Drop order is renamed Supply Order.</li>
+    <li>The full game window's text is shortened so it no longer gets cut off.</li>
+    <li>If the store can't offer the full game, it now says why. Before, it only said the store wasn't ready.</li>
+  </ul>
+</main>
+</body>
+</html>
