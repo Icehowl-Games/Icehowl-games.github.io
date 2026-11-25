@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ironclad 3.2.2 patch notes</title>
+<meta name="description" content="Patch notes for Ironclad: Battle Tank 3.2.2.">
+<meta name="theme-color" content="#14110E">
+<link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+<style>
+  @font-face { font-family: "Bebas Neue"; src: url("../fonts/BebasNeue.otf") format("opentype"); font-display: swap; }
+  :root {
+    --bg: #14110E; --panel: #1C1915; --ink: #E6D9BF; --muted: #A99178; --rule: #3A3529;
+    --accent: #D9A441; --link: #E8B85A; --olive: #6E7446;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #F4EFE4; --panel: #FFFFFF; --ink: #24201A; --muted: #6B5E4D; --rule: #DDD3C0;
+            --accent: #8A5A12; --link: #7A4E0C; --olive: #5A6038; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+  .wings { display: flex; align-items: center; justify-content: center; gap: 14px; }
+  .wings::before, .wings::after {
+    content: ""; flex: 1; height: 10px; max-width: 120px;
+    background: linear-gradient(var(--olive) 0 2px, transparent 2px 4px, var(--olive) 4px 6px, transparent 6px 8px, var(--olive) 8px 10px);
+  }
+  h1 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 44px; line-height: 1; margin: 0; color: var(--accent); text-align: center;
+  }
+  .sub { text-align: center; color: var(--muted); margin: 10px 0 32px; font-size: 14px; }
+  h2 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em;
+    font-size: 26px; line-height: 1.1; color: var(--accent); margin: 36px 0 8px;
+    padding-top: 16px; border-top: 1px solid var(--rule);
+  }
+  h3 { font-size: 16px; margin: 20px 0 4px; }
+  p, ul { margin: 0 0 12px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--link); text-underline-offset: 2px; overflow-wrap: anywhere; }
+  .summary { background: var(--panel); border: 1px solid var(--rule); border-left: 4px solid var(--olive); padding: 16px 18px; border-radius: 6px; }
+  .summary p:last-child, .summary ul:last-child { margin-bottom: 0; }
+  dl { margin: 0 0 12px; }
+  dt { font-weight: 600; margin-top: 12px; }
+  dd { margin: 2px 0 0; color: var(--ink); }
+  .muted { color: var(--muted); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="wings"><h1>Patch Notes 3.2.2</h1></div>
+  <p class="sub">Ironclad: Battle Tank for Android &middot; 25 November 2026</p>
+  <h2>Highlights</h2>
+  <ul>
+    <li>Enemies now plan their way round walls and each other instead of getting stuck.</li>
+    <li>DOMINATOR's shield is a dome of hexagonal panes that pushes everything out from under it.</li>
+    <li>Every tank now fires from the end of its barrels.</li>
+    <li>The ASSAULT HOWITZER, PETARD, QUAD and the MAMMOTH's Avenger are now 3D models.</li>
+    <li>Nothing moves between the Citadel's floors except by the stairs.</li>
+  </ul>
+  <h2>Enemy pathing</h2>
+  <ul>
+    <li>Enemies plan a path to you round walls, buildings and cover. They used to drive straight at you and stick on walls.</li>
+    <li>Each path is planned for the unit's own size so vehicles keep to gaps they fit through.</li>
+    <li>Enemies whose paths would meet steer round each other.</li>
+    <li>Enemies drive round bosses as they would round a building.</li>
+    <li>Paths keep off walls where there's room.</li>
+  </ul>
+  <h2>DOMINATOR</h2>
+  <ul>
+    <li>Between phases its shield is a dome of hexagonal panes like Bulwark's. It was a placeholder.</li>
+    <li>The dome is stretched to fit DOMINATOR's shape.</li>
+    <li>As the dome rises it pushes your tank and every enemy out from under it.</li>
+    <li>Nothing on the ground can get back under the dome while it's up.</li>
+    <li>Your rounds now stop at the dome's wall.</li>
+    <li>The panes flare where your rounds hit.</li>
+    <li>A band of light sweeps the dome as its bar refills.</li>
+  </ul>
+  <h2>Bosses</h2>
+  <ul>
+    <li>A hit now flashes the boss's own shape. It used to flash white boxes.</li>
+    <li>Stun and rage glows now follow the boss's shape.</li>
+    <li>BASTION waits 40% longer between attacks.</li>
+    <li>Bosses with turrets fire their shells and bullets from their barrels.</li>
+  </ul>
+  <h2>Guided rockets</h2>
+  <ul>
+    <li>The Fleet's guided rockets and missiles turn after you about half as sharply.</li>
+    <li>A guided rocket you get past now flies on straight instead of turning back.</li>
+  </ul>
+  <h2>Your tank</h2>
+  <ul>
+    <li>Rounds leave from the muzzle of each barrel. Some tanks fired them from inside the turret.</li>
+    <li>Twin guns fire from each barrel in turn.</li>
+    <li>The flamethrower's stream starts at its nozzle.</li>
+    <li>Barrel ends are round. They had square caps that stood out past the barrel.</li>
+    <li>Muzzles are dark inside. Some could be seen through.</li>
+    <li>The LONG GUN's extension is round like the rest of the barrel. It was a flat slab.</li>
+    <li>The MAMMOTH's ASSAULT HOWITZER is a 3D model. It was a flat picture laid over the turret.</li>
+    <li>With Avenger the MAMMOTH carries a 3D rotary cannon. It was a flat picture.</li>
+    <li>The SAPPER's PETARD is a 3D model.</li>
+    <li>The SKYGUARD's QUAD is a 3D model.</li>
+  </ul>
+  <h2>Enemy guns</h2>
+  <ul>
+    <li>Enemy tanks fire from the end of their barrels. Their rounds used to appear just ahead of the hull.</li>
+    <li>Tank destroyers, flak tracks, AT guns and security turrets fire from their barrels.</li>
+    <li>Flame tanks spray from their nozzles.</li>
+    <li>GOLIATH fires from its guns.</li>
+    <li>Train cars fire their broadsides from their guns.</li>
+  </ul>
+  <h2>The Citadel</h2>
+  <ul>
+    <li>Equipment crates, unstable reactors, decoys, tire tracks and scorch marks stay on their own floor. They used to show on other floors.</li>
+    <li>The boxes in the middle of the roof are gone.</li>
+    <li>Short wall stubs on the roof that looked like raised floor are now open floor.</li>
+    <li>The roof wall's top is painted right into its corners. A patch of bare floor showed beside each one.</li>
+  </ul>
+</main>
+</body>
+</html>
