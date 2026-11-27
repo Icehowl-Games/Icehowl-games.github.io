@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ironclad: Battle Tank</title>
-<meta name="description" content="Ironclad: Battle Tank is a top-down tank roguelike for Android. Fight through a five-stage campaign, take an upgrade every wave, beat 14 bosses and storm the Citadel.">
+<meta name="description" content="Ironclad: Battle Tank is a top-down tank roguelike for Android. Build your tank after every wave from 126 upgrades, beat 14 bosses and storm the Citadel.">
 <meta name="theme-color" content="#14110E">
 <meta property="og:title" content="Ironclad: Battle Tank">
-<meta property="og:description" content="Top-down tank roguelike: build your tank, beat 14 bosses, storm the Citadel.">
+<meta property="og:description" content="Top-down tank roguelike. Build a war machine, crush 14 bosses, take the Citadel.">
 <meta property="og:image" content="https://icehowl-games.github.io/img/logo.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
@@ -24,38 +24,148 @@
     background: radial-gradient(ellipse at 50% 0%, #2A2418 0%, var(--bg) 60%) no-repeat, var(--bg);
     font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   }
-  main { max-width: 880px; margin: 0 auto; padding: 24px 16px 48px; }
+  main { max-width: 940px; margin: 0 auto; padding: 24px 16px 48px; }
+  a { color: var(--accent); text-underline-offset: 2px; }
   .hero { text-align: center; }
   .hero img { width: min(520px, 100%); height: auto; display: block; margin: 0 auto; }
   .tag {
-    font-family: "Bebas Neue", Impact, sans-serif; letter-spacing: 0.05em; font-size: 26px;
+    font-family: "Bebas Neue", Impact, sans-serif; letter-spacing: 0.05em; font-size: 30px;
     color: var(--accent); margin: 4px 0 4px;
   }
-  .lede { color: var(--muted); margin: 0 auto 24px; max-width: 560px; }
-  .actions { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .lede { color: var(--muted); margin: 0 auto 24px; max-width: 580px; }
+  .lede b { color: var(--ink); font-weight: 600; }
   .stores { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
   .store {
     padding: 10px 16px; border-radius: 8px; border: 1px solid var(--rule); background: var(--panel);
     color: var(--muted); font-size: 14px; min-width: 200px; text-align: center;
   }
   .store b { display: block; color: var(--ink); font-weight: 600; }
-  .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 40px 0 8px; }
+  .shots {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 40px 0 8px;
+  }
   .shots figure { margin: 0; }
-  .shots img { width: 100%; height: auto; display: block; border-radius: 10px; border: 1px solid var(--rule); }
-  .shots figcaption { text-align: center; color: var(--muted); font-size: 13px; margin-top: 6px; }
+  .shots img { width: 100%; height: auto; display: block; border-radius: 10px; border: 1px solid var(--rule); background: #0E0C0A; }
+  .shots figcaption { text-align: center; color: var(--muted); font-size: 14px; margin-top: 6px; }
+  .shots figcaption b { display: block; color: var(--ink); font-weight: 600; font-size: 15px; }
   h2 {
     font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em; font-size: 30px;
-    color: var(--accent); text-align: center; margin: 40px 0 12px;
+    color: var(--accent); text-align: center; margin: 44px 0 12px;
   }
-  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; padding: 0; list-style: none; margin: 0; }
-  .features li { background: var(--panel); border: 1px solid var(--rule); border-left: 4px solid var(--olive); border-radius: 6px; padding: 12px 14px; }
-  .features b { display: block; }
-  .features span { color: var(--muted); font-size: 15px; }
+  .update {
+    background: var(--panel); border: 1px solid var(--rule); border-left: 4px solid var(--olive-hi); border-radius: 8px;
+    padding: 14px 18px; max-width: 640px; margin: 28px auto 0;
+  }
+  .update h3 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em; font-size: 22px;
+    color: var(--accent); margin: 0;
+  }
+  .update .when { color: var(--muted); font-size: 14px; margin: 0 0 6px; }
+  .update ul { margin: 0 0 8px; padding-left: 20px; }
+  .update li { margin: 3px 0; }
+  .update .links { margin: 0; font-size: 15px; }
+  .stats {
+    display: grid; grid-template-columns: repeat(5, 1fr); margin: 8px 0 12px; text-align: center;
+    background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; position: relative; overflow: hidden;
+  }
+  .stats::before, .stats::after {
+    content: ""; position: absolute; left: 0; right: 0; height: 6px;
+    background: linear-gradient(var(--olive) 0 2px, transparent 2px 4px, var(--olive) 4px 6px);
+  }
+  .stats::before { top: 0; } .stats::after { bottom: 0; }
+  .stat { padding: 18px 6px 14px; }
+  .stat + .stat { border-left: 1px solid var(--rule); }
+  .stat b {
+    display: block; font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; font-size: 52px; line-height: 1;
+    color: var(--accent); text-shadow: 0 2px 0 #000;
+  }
+  .stat span { display: block; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+  .spot { display: grid; grid-template-columns: 1fr 1.45fr; gap: 32px; align-items: center; margin: 56px 0; }
+  .spot.flip { grid-template-columns: 1.45fr 1fr; }
+  .spot.flip .art { order: -1; }
+  .kicker {
+    font-family: "Bebas Neue", Impact, sans-serif; letter-spacing: 0.1em; font-size: 18px; color: var(--olive-hi); margin: 0;
+  }
+  .spot h3 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.03em; font-size: 40px; line-height: 1;
+    color: var(--ink); margin: 2px 0 10px;
+  }
+  .spot p { color: var(--muted); margin: 0 0 10px; }
+  .art {
+    background: radial-gradient(ellipse at 50% 35%, #2E2819 0%, #17140F 75%); border: 1px solid var(--rule);
+    border-radius: 12px; padding: 18px 14px 14px; position: relative;
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.5), 0 10px 30px rgba(0,0,0,0.35);
+  }
+  .art::before {
+    content: ""; position: absolute; top: 6px; left: 50%; width: 120px; margin-left: -60px; height: 6px;
+    background: linear-gradient(var(--olive) 0 2px, transparent 2px 4px, var(--olive) 4px 6px);
+  }
+  .cast { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px 6px; align-items: start; list-style: none; padding: 0; margin: 8px 0 0; }
+  .cast li { text-align: center; }
+  .cast img { width: 100%; height: auto; display: block; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6)); }
+  .cast span { display: block; font-size: 9.5px; letter-spacing: 0.03em; margin-top: 2px; color: var(--muted); line-height: 1.2; min-height: 2.4em; }
+  .cast .classified div {
+    aspect-ratio: 1; display: flex; align-items: center; justify-content: center; margin: 12%; border-radius: 50%;
+    border: 2px dashed #5A4F3C; font-family: "Bebas Neue", Impact, sans-serif; font-size: 34px; color: #5A4F3C;
+  }
+  .icons { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px 8px; align-items: start; list-style: none; padding: 0; margin: 8px 0 0; }
+  .icons li { text-align: center; }
+  .icons img {
+    width: 100%; aspect-ratio: 1; height: auto; display: block; border-radius: 50%; padding: 10%;
+    background: radial-gradient(circle at 50% 40%, #2A251D, #120F0C); border: 3px solid var(--ring, #C9B48A);
+    box-shadow: 0 0 0 1px #000, 0 0 14px color-mix(in srgb, var(--ring, #C9B48A) 35%, transparent);
+  }
+  .icons .rare { --ring: #5C8FC4; } .icons .epic { --ring: #9A6BC9; } .icons .legendary { --ring: #E0952E; }
+  .icons span { display: block; font-size: 9.5px; letter-spacing: 0.02em; color: var(--muted); line-height: 1.2; margin-top: 5px; }
+  .rarities { display: flex; gap: 14px; justify-content: center; margin: 12px 0 0; padding: 0; list-style: none; font-size: 12px; color: var(--muted); }
+  .rarities li::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; background: var(--ring); }
+  .fleet { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; list-style: none; padding: 0; margin: 8px 0 0; }
+  .fleet li { text-align: center; }
+  .fleet img { width: 86%; margin: 0 auto 4px; height: auto; display: block; filter: drop-shadow(0 6px 8px rgba(0,0,0,0.6)); }
+  .fleet b { display: block; font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; font-size: 22px; letter-spacing: 0.05em; color: var(--accent); line-height: 1; }
+  .fleet span { display: block; font-size: 12px; color: var(--muted); line-height: 1.35; margin-top: 3px; }
+  .fronts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px 6px; list-style: none; padding: 0; margin: 8px 0 0; }
+  .fronts li { text-align: center; }
+  .fronts img { width: 100%; height: auto; display: block; filter: drop-shadow(0 8px 10px rgba(0,0,0,0.65)); }
+  .fronts span {
+    display: block; margin-top: -6px; font-family: "Bebas Neue", Impact, sans-serif; font-size: 17px; letter-spacing: 0.05em;
+    line-height: 1.1; color: var(--ink);
+  }
+  .more { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; list-style: none; padding: 0; margin: 0; }
+  .more li {
+    display: grid; grid-template-columns: 56px 1fr; gap: 12px; align-items: start;
+    background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 14px;
+  }
+  .more img { width: 56px; height: 56px; filter: drop-shadow(0 3px 4px rgba(0,0,0,0.6)); }
+  .more b { display: block; font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; font-size: 22px; letter-spacing: 0.04em; color: var(--accent); line-height: 1.1; }
+  .more span { color: var(--muted); font-size: 15px; }
+  .price { text-align: center; color: var(--muted); max-width: 640px; margin: 0 auto; }
+  .price b { color: var(--ink); font-weight: 600; }
   footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 14px; text-align: center; }
-  footer a { color: var(--accent); }
-  @media (max-width: 480px) {
+  .swipe { display: none; text-align: center; color: var(--muted); font-size: 13px; margin: 0; }
+  @media (max-width: 640px) {
+    .stats { grid-template-columns: repeat(6, 1fr); }
+    .stat { grid-column: span 2; }
+    .stat:nth-child(n+4) { grid-column: span 3; border-top: 1px solid var(--rule); }
+    .stat:nth-child(4) { border-left: 0; }
+    .stat b { font-size: 42px; }
+    .spot, .spot.flip { grid-template-columns: 1fr; gap: 16px; margin: 44px 0; }
+    .spot.flip .art { order: 0; }
+    .spot h3 { font-size: 34px; }
+    .cast { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .cast span, .icons span { font-size: 10px; }
+    .icons { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .fleet { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .fronts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .fronts span { font-size: 15px; }
+    .more { grid-template-columns: 1fr; }
     .store { min-width: 0; flex: 1 1 100%; }
-    .shots { gap: 8px; }
+    .shots {
+      display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; margin: 32px -16px 8px; padding: 0 16px 8px;
+      -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    }
+    .shots::-webkit-scrollbar { display: none; }
+    .shots figure { flex: 0 0 68%; scroll-snap-align: center; }
+    .swipe { display: block; }
   }
 </style>
 </head>
@@ -63,33 +173,157 @@
 <main>
   <section class="hero">
     <img src="img/logo.webp" width="720" height="480" alt="Ironclad: Battle Tank">
-    <p class="tag">Drive to dodge. Stop to fire.</p>
-    <p class="lede">A top-down tank roguelike for Android. Break through the Iron Fleet across a five-stage campaign, take an upgrade after every wave, and fight your way into the Citadel.</p>
-    <div class="actions">
-      <div class="stores">
-        <div class="store"><b>Coming soon to Google Play</b>Free to download. One purchase unlocks the full game.</div>
-      </div>
+    <p class="tag">Crush their war machines.</p>
+    <p class="lede">A top-down tank roguelike for Android. <b>The Iron Fleet holds every front from the coast to the mountains. You have one tank.</b> Build it up after every wave and fight your way into the Citadel.</p>
+    <div class="stores">
+      <div class="store"><b>Coming soon to Google Play</b>Free to download. One purchase unlocks the full game.</div>
     </div>
   </section>
 
   <div class="shots">
-    <figure><img src="img/combat.jpg" width="540" height="1170" alt="An Ironclad tank fighting helicopters and tanks on the Verdant Front" loading="lazy"><figcaption>Ten battlefields</figcaption></figure>
-    <figure><img src="img/upgrades.jpg" width="540" height="1170" alt="Choosing one of three upgrade cards after a wave" loading="lazy"><figcaption>An upgrade every wave</figcaption></figure>
-    <figure><img src="img/boss.jpg" width="540" height="1170" alt="The GOLIATH boss super-heavy tank" loading="lazy"><figcaption>14 bosses</figcaption></figure>
+    <figure><img src="img/altstadt.jpg" srcset="img/altstadt.jpg 540w, img/altstadt@2x.jpg 1080w" sizes="(max-width: 640px) 68vw, 300px" width="540" height="1170" alt="Holding the station in Altstadt against tanks and a helicopter" loading="lazy"><figcaption><b>Objectives under fire</b>Hold the station in Altstadt.</figcaption></figure>
+    <figure><img src="img/upgrades.jpg" srcset="img/upgrades.jpg 540w, img/upgrades@2x.jpg 1080w" sizes="(max-width: 640px) 68vw, 300px" width="540" height="1170" alt="Choosing one of three upgrade cards after wave 3" loading="lazy"><figcaption><b>An upgrade every wave</b>Pick one of three after each wave.</figcaption></figure>
+    <figure><img src="img/goliath.jpg" srcset="img/goliath.jpg 540w, img/goliath@2x.jpg 1080w" sizes="(max-width: 640px) 68vw, 300px" width="540" height="1170" alt="The GOLIATH super-heavy tank crashing out of a building in Altstadt" loading="lazy"><figcaption><b>14 bosses</b>GOLIATH breaks through Altstadt.</figcaption></figure>
+    <figure><img src="img/tundra.jpg" srcset="img/tundra.jpg 540w, img/tundra@2x.jpg 1080w" sizes="(max-width: 640px) 68vw, 300px" width="540" height="1170" alt="Fighting a ring of enemy tanks in an Iron Tundra snowstorm" loading="lazy"><figcaption><b>Weather and events</b>A snowstorm on the Iron Tundra.</figcaption></figure>
+    <figure><img src="img/redbasin.jpg" srcset="img/redbasin.jpg 540w, img/redbasin@2x.jpg 1080w" sizes="(max-width: 640px) 68vw, 300px" width="540" height="1170" alt="Fighting tanks and infantry in the Red Basin" loading="lazy"><figcaption><b>Ten battlefields</b>Holding out in the Red Basin.</figcaption></figure>
+    <figure><img src="img/crown.jpg" srcset="img/crown.jpg 540w, img/crown@2x.jpg 1080w" sizes="(max-width: 640px) 68vw, 300px" width="540" height="1170" alt="An explosion beside the tank on Broken Crown" loading="lazy"><figcaption><b>Every front fights back</b>Breaking through on Broken Crown.</figcaption></figure>
   </div>
+  <p class="swipe">Swipe for more</p>
+
+  <section class="update" aria-labelledby="latest">
+    <h3 id="latest">Latest update: 3.2.3</h3>
+    <p class="when">26 November 2026</p>
+    <ul>
+      <li>Every enemy and boss now winds up before it attacks.</li>
+      <li>IRON HORSE rears and then gallops its charge in a straight line.</li>
+      <li>THE RESEARCHER dodges with a single sideways hop.</li>
+      <li>Soldiers walk with a full stride and raise their weapons to aim.</li>
+      <li>3D models are lit by the explosions, fires and flashes around them.</li>
+    </ul>
+    <p class="links"><a href="patch-notes/3.2.3.html">Full patch notes</a> &middot; <a href="patch-notes/">Every update</a></p>
+  </section>
 
   <h2>The game</h2>
-  <ul class="features">
-    <li><b>A five-stage campaign</b><span>Every run draws its route from ten battlefields, from the Verdant Front to Deadwater Delta, each with a mechanic of its own. Every road ends at the Citadel.</span></li>
-    <li><b>14 bosses</b><span>GOLIATH, GEDDON, THE DREADNOUGHT, THE LEVIATHAN and more, with parts to shoot off and weak points to find. The last is DOMINATOR.</span></li>
-    <li><b>Over 100 upgrades</b><span>Four rarities, evolutions and synergies, plus Contraband from the Boneyard's black market: real power, with a real drawback.</span></li>
-    <li><b>Six vehicles</b><span>From the Ironclad main battle tank to the super-heavy Mammoth. Each one changes a rule.</span></li>
-    <li><b>Operation Reclamation</b><span>Loop the campaign with everything you've built, one Escalation higher each time.</span></li>
-    <li><b>Weekly operation</b><span>The same seed, vehicle and Escalation for every player, ranked on an online leaderboard.</span></li>
+  <div class="stats">
+    <div class="stat"><b>10</b><span>Battlefields</span></div>
+    <div class="stat"><b>14</b><span>Bosses</span></div>
+    <div class="stat"><b>126</b><span>Upgrades</span></div>
+    <div class="stat"><b>92</b><span>Synergies</span></div>
+    <div class="stat"><b>6</b><span>Vehicles</span></div>
+  </div>
+
+  <section class="spot">
+    <div>
+      <p class="kicker">14 bosses</p>
+      <h3>Bring down their war machines</h3>
+      <p>GOLIATH, GEDDON, THE DREADNOUGHT, IRON HORSE and ten more. Shoot off their weapons and find their weak points. The heaviest roll straight through buildings to reach you.</p>
+      <p>The last one waits in the Citadel.</p>
+    </div>
+    <div class="art">
+      <ul class="cast">
+      <li><img src="img/bosses/goliath.webp" width="192" height="192" alt="GOLIATH" loading="lazy"><span>GOLIATH</span></li>
+      <li><img src="img/bosses/geddon.webp" width="192" height="192" alt="GEDDON" loading="lazy"><span>GEDDON</span></li>
+      <li><img src="img/bosses/dreadnought.webp" width="192" height="192" alt="THE DREADNOUGHT" loading="lazy"><span>THE DREADNOUGHT</span></li>
+      <li><img src="img/bosses/ironhorse.webp" width="192" height="192" alt="IRON HORSE" loading="lazy"><span>IRON HORSE</span></li>
+      <li><img src="img/bosses/reaper.webp" width="192" height="192" alt="REAPER" loading="lazy"><span>REAPER</span></li>
+      <li><img src="img/bosses/bastion.webp" width="192" height="192" alt="BASTION" loading="lazy"><span>BASTION</span></li>
+      <li><img src="img/bosses/juggernaut.webp" width="192" height="192" alt="JUGGERNAUT" loading="lazy"><span>JUGGERNAUT</span></li>
+      <li><img src="img/bosses/foundry.webp" width="192" height="192" alt="THE FOUNDRY" loading="lazy"><span>THE FOUNDRY</span></li>
+      <li><img src="img/bosses/mirage.webp" width="192" height="192" alt="MIRAGE" loading="lazy"><span>MIRAGE</span></li>
+      <li><img src="img/bosses/monolith.webp" width="192" height="192" alt="MONOLITH" loading="lazy"><span>MONOLITH</span></li>
+      <li><img src="img/bosses/leviathan.webp" width="192" height="192" alt="THE LEVIATHAN" loading="lazy"><span>THE LEVIATHAN</span></li>
+      <li><img src="img/bosses/researcher.webp" width="192" height="192" alt="THE RESEARCHER" loading="lazy"><span>THE RESEARCHER</span></li>
+      <li><img src="img/bosses/admiral.webp" width="192" height="192" alt="THE ADMIRAL" loading="lazy"><span>THE ADMIRAL</span></li>
+      <li class="classified"><div aria-hidden="true">?</div><span>CLASSIFIED</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="spot flip">
+    <div>
+      <p class="kicker">126 upgrades &middot; 92 synergies</p>
+      <h3>Build a tank they never planned for</h3>
+      <p>Take an upgrade after every wave. Stack the right ones to form evolutions. Burn them, stun them, chain lightning through their ranks or irradiate them until they melt down.</p>
+      <p>Swap the main gun for a Railgun, an Avenger rotary cannon or a Flamethrower.</p>
+    </div>
+    <div class="art">
+      <ul class="icons">
+      <li class="epic"><img src="img/icons/tesla.webp" width="144" height="144" alt="TESLA COIL" loading="lazy"><span>TESLA COIL</span></li>
+      <li class="legendary"><img src="img/icons/chain.webp" width="144" height="144" alt="CHAIN REACTION" loading="lazy"><span>CHAIN REACTION</span></li>
+      <li class="rare"><img src="img/icons/cobalt.webp" width="144" height="144" alt="COBALT ROUNDS" loading="lazy"><span>COBALT ROUNDS</span></li>
+      <li class="legendary"><img src="img/icons/railgun.webp" width="144" height="144" alt="RAILGUN" loading="lazy"><span>RAILGUN</span></li>
+      <li class="epic"><img src="img/icons/emp.webp" width="144" height="144" alt="EMP PULSE" loading="lazy"><span>EMP PULSE</span></li>
+      <li class="rare"><img src="img/icons/arc.webp" width="144" height="144" alt="ARC ROUNDS" loading="lazy"><span>ARC ROUNDS</span></li>
+      <li class="legendary"><img src="img/icons/criticalmass.webp" width="144" height="144" alt="CRITICAL MASS" loading="lazy"><span>CRITICAL MASS</span></li>
+      <li class="epic"><img src="img/icons/cluster.webp" width="144" height="144" alt="CLUSTER MUNITIONS" loading="lazy"><span>CLUSTER MUNITIONS</span></li>
+      <li class="rare"><img src="img/icons/mines.webp" width="144" height="144" alt="MINE LAYER" loading="lazy"><span>MINE LAYER</span></li>
+      <li class="legendary"><img src="img/icons/flamethrower.webp" width="144" height="144" alt="FLAMETHROWER" loading="lazy"><span>FLAMETHROWER</span></li>
+      <li class="epic"><img src="img/icons/bulwark.webp" width="144" height="144" alt="BULWARK" loading="lazy"><span>BULWARK</span></li>
+      <li class="legendary"><img src="img/icons/crocodile.webp" width="144" height="144" alt="CROCODILE" loading="lazy"><span>CROCODILE</span></li>
+      </ul>
+      <ul class="rarities"><li style="--ring:#C9B48A">Basic</li><li style="--ring:#5C8FC4">Rare</li><li style="--ring:#9A6BC9">Epic</li><li style="--ring:#E0952E">Legendary</li></ul>
+    </div>
+  </section>
+
+  <section class="spot">
+    <div>
+      <p class="kicker">6 vehicles</p>
+      <h3>Six ways to fight</h3>
+      <p>Each vehicle changes a rule. Earn its feats and give it a paint scheme of your own.</p>
+    </div>
+    <div class="art">
+      <ul class="fleet">
+      <li><img src="img/vehicles/ironclad.webp" width="192" height="192" alt="The Ironclad" loading="lazy"><b>Ironclad</b><span>Heavy armor and a dependable gun.</span></li>
+      <li><img src="img/vehicles/hound.webp" width="192" height="192" alt="The Hound" loading="lazy"><b>Hound</b><span>Fast and fires on the move.</span></li>
+      <li><img src="img/vehicles/sapper.webp" width="192" height="192" alt="The Sapper" loading="lazy"><b>Sapper</b><span>Lobs shells over cover.</span></li>
+      <li><img src="img/vehicles/skyguard.webp" width="192" height="192" alt="The Skyguard" loading="lazy"><b>Skyguard</b><span>Pours out a stream of flak.</span></li>
+      <li><img src="img/vehicles/mammoth.webp" width="192" height="192" alt="The Mammoth" loading="lazy"><b>Mammoth</b><span>The slowest turret and the biggest gun.</span></li>
+      <li><img src="img/vehicles/warden.webp" width="192" height="192" alt="The Warden" loading="lazy"><b>Warden</b><span>Sees four cards at every upgrade.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="spot flip">
+    <div>
+      <p class="kicker">10 battlefields</p>
+      <h3>A new route every run</h3>
+      <p>Hold the cathedral in Altstadt. Knock out coastal guns on the Black Coast. Dodge molten slag in the Ashen Foundry. Cut the power to a shielded dish in an Iron Tundra blizzard.</p>
+      <p>Enemy aces hunt you across the map. Hidden levels wait for anyone who goes looking.</p>
+    </div>
+    <div class="art">
+      <ul class="fronts">
+        <li><img src="img/fronts/verdant.webp" width="360" height="360" alt="Verdant Front diorama" loading="lazy"><span>Verdant Front</span></li>
+        <li><img src="img/fronts/hollow.webp" width="360" height="360" alt="Hollow Fields diorama" loading="lazy"><span>Hollow Fields</span></li>
+        <li><img src="img/fronts/altstadt.webp" width="360" height="360" alt="Altstadt diorama" loading="lazy"><span>Altstadt</span></li>
+        <li><img src="img/fronts/tundra.webp" width="360" height="360" alt="Iron Tundra diorama" loading="lazy"><span>Iron Tundra</span></li>
+        <li><img src="img/fronts/blackcoast.webp" width="360" height="360" alt="Black Coast diorama" loading="lazy"><span>Black Coast</span></li>
+        <li><img src="img/fronts/ashen.webp" width="360" height="360" alt="Ashen Foundry diorama" loading="lazy"><span>Ashen Foundry</span></li>
+        <li><img src="img/fronts/steel.webp" width="360" height="360" alt="Steel Corridor diorama" loading="lazy"><span>Steel Corridor</span></li>
+        <li><img src="img/fronts/redbasin.webp" width="360" height="360" alt="Red Basin diorama" loading="lazy"><span>Red Basin</span></li>
+        <li><img src="img/fronts/crown.webp" width="360" height="360" alt="Broken Crown diorama" loading="lazy"><span>Broken Crown</span></li>
+        <li><img src="img/fronts/deadwater.webp" width="360" height="360" alt="Deadwater Delta diorama" loading="lazy"><span>Deadwater Delta</span></li>
+        <li><img src="img/fronts/boneyard.webp" width="360" height="360" alt="The Boneyard diorama" loading="lazy"><span>The Boneyard</span></li>
+        <li><img src="img/fronts/citadel.webp" width="360" height="360" alt="The Citadel diorama" loading="lazy"><span>The Citadel</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <h2>More to fight for</h2>
+  <ul class="more">
+    <li><img src="img/icons/fleet_mark.webp" width="144" height="144" alt="" loading="lazy"><div><b>The Citadel</b><span>Hack through the Iron Fleet's mountain fortress floor by floor. Face DOMINATOR across four phases and escape as its core melts down.</span></div></li>
+    <li><img src="img/icons/artillery.webp" width="144" height="144" alt="" loading="lazy"><div><b>Equipment crates</b><span>Grab crates on the battlefield to call in fire missions, strafing runs and supply drops.</span></div></li>
+    <li><img src="img/icons/bsalvage.webp" width="144" height="144" alt="" loading="lazy"><div><b>The Boneyard</b><span>Track down a salvage beacon to reach a black market. Its experimental tech has real power and a real catch.</span></div></li>
+    <li><img src="img/icons/overdrive.webp" width="144" height="144" alt="" loading="lazy"><div><b>Escalation</b><span>Raise the Escalation for harder runs and a higher score. Operation Reclamation loops the campaign with everything you've built.</span></div></li>
+    <li><img src="img/icons/cadence.webp" width="144" height="144" alt="" loading="lazy"><div><b>Weekly operations</b><span>Every player gets the same run each week, ranked on an online leaderboard.</span></div></li>
+    <li><img src="img/icons/medal_2.webp" width="144" height="144" alt="" loading="lazy"><div><b>Ranks and medals</b><span>Rise from Private to General and unlock paint schemes for every vehicle. The Codex records everything you meet.</span></div></li>
   </ul>
 
+  <h2>Free to download</h2>
+  <p class="price">Play the campaign up to the Citadel for free. <b>One purchase unlocks the full game:</b> the Citadel, every level and vehicle, weekly operations, the whole Armory and Escalation. It also removes the ads. The free version offers optional rewarded ads for REQ. No subscriptions.</p>
+  <p class="price">Plays offline. Leaderboards run through Google Play Games.</p>
+
   <footer>
-    <a href="patch-notes/">Patch notes</a> &middot; <a href="privacy.html">Privacy policy</a> &middot; Ironclad: Battle Tank &copy; 2026
+    <a href="patch-notes/">Patch notes</a> &middot; <a href="privacy.html">Privacy policy</a> &middot; Ironclad: Battle Tank &copy; 2026 Icehowl Games
   </footer>
 </main>
 </body>
